@@ -1,0 +1,194 @@
+{*
+    storefront homepage
+*}
+
+{if $theme_settings.homepage_sidebar_layout != 'hidden'}
+<div class="sidebar{if $theme_settings.homepage_sidebar_layout == 'left'} left-sidebar{/if}">
+
+    <!-- CONTACT INFO -->
+    {if $theme_settings.homepage_sidebar_storeinfo}
+        <figure class="store-info">
+            <h1 itemprop="name">{$wa->shop->settings('name')}</h1>
+            <h3>
+                <span itemprop="telephone">{$wa->shop->settings('phone')}</span>
+                {if $wh = $wa->shop->settings('workhours')}<br>
+                    <span class="hint">{$wh.days_from_to}{if $wh.hours_from && $wh.hours_to} {$wh.hours_from}—{$wh.hours_to}{/if}</span>
+                {/if}
+            </h3>
+            <meta itemprop="address" content="{$wa->shop->settings('country')}">
+            <meta itemprop="currenciesAccepted" content="{$wa->shop->currency()}">
+        </figure>
+    {/if}
+
+    <!-- ROOT CATEGORIES -->
+    {if $theme_settings.homepage_sidebar_categories}
+        {$categories = $wa->shop->categories(0, 0, true)}
+        {if count($categories)}
+            <ul class="tree">
+                {foreach $categories as $cat}
+                    <li>
+                        <a href="{$cat.url}">{$cat.name}</a>
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+    {/if}
+
+    <!-- BULLETS -->
+    <section class="bullets">
+        {if !empty($theme_settings.homepage_bullet_title_1)}
+        <figure class="bullet">
+            <h4><span class="b-glyph b-shipping"></span> {$theme_settings.homepage_bullet_title_1}</h4>
+            <p>{$theme_settings.homepage_bullet_body_1}</p>
+        </figure>
+        {/if}
+        {if !empty($theme_settings.homepage_bullet_title_2)}
+        <figure class="bullet">
+            <h4><span class="b-glyph b-payment"></span> {$theme_settings.homepage_bullet_title_2}</h4>
+            <p>{$theme_settings.homepage_bullet_body_2}</p>
+        </figure>
+        {/if}
+        {if !empty($theme_settings.homepage_bullet_title_3)}
+        <figure class="bullet">
+            <h4><span class="b-glyph b-location"></span> {$theme_settings.homepage_bullet_title_3}</h4>
+            <p>{$theme_settings.homepage_bullet_body_3}</p>
+        </figure>
+        {/if}
+    </section>
+
+    <!-- FOLLOW -->
+    <aside class="connect">
+        {if !empty($theme_settings.facebook_likebox_code)}
+            <div class="likebox">
+                {$theme_settings.facebook_likebox_code}
+            </div>
+        {/if}
+        {if !empty($theme_settings.twitter_timeline_code)}
+            <div class="likebox">
+                {$theme_settings.twitter_timeline_code}
+            </div>
+        {/if}
+        {if !empty($theme_settings.vk_widget_code)}
+            <div class="likebox">
+                {$theme_settings.vk_widget_code}
+            </div>
+        {/if}
+        {*
+        <div class="likebox">
+             your custom social widget
+        </div>
+        *}
+    </aside>
+
+</div>
+{/if}
+
+<div class="content{if $theme_settings.homepage_sidebar_layout != 'hidden'} with-sidebar{/if}{if $theme_settings.homepage_sidebar_layout == 'left'} left-sidebar{/if}">
+
+    {$promocards = $wa->shop->promos('link', '900')}
+    {$bestsellers = $wa->shop->productSet( $theme_settings.homepage_productset_bestsellers )}
+
+    {if $theme_settings.homepage_bxslider_mode !== 'promos' && $theme_settings.homepage_bxslider_mode !== 'hidden'}
+        {$promoproducts = $wa->shop->productSet( $theme_settings.homepage_productset_promo )}
+    {/if}
+
+    {if empty($promocards) && empty($promoproducts) && empty($bestsellers)}
+
+        <article class="welcome">
+            <h1>[`Welcome to your new online store!`]</h1>
+            <p>{sprintf('[`Start by <a href="%s">creating a product</a> in your store backend.`]', $wa_backend_url|cat:'shop/?action=products#/welcome/')}</p>
+            <style>
+                .page-content.with-sidebar { margin-left: 0; border-left: 0; }
+            </style>
+        </article>
+
+    {elseif $theme_settings.homepage_bxslider_mode != 'hidden'}
+
+        <!-- SLIDER -->
+        {include file="./home.slider.html" inline}
+    {/if}
+
+    {if $promocards && $theme_settings.homepage_promocards_below_the_slider}
+        <!-- PROMOS -->
+        <section class="promos">
+            <ul>
+                {foreach $promocards as $promo}<li id="s-promo-{$promo.id}">
+                    <a href="{$promo.link|escape}" style="background-image: url('{$promo.image}');">
+                        <div class="background-color-layer"></div>
+                        {if !empty($promo.title)}<h5 style="color: {$promo.color};">{$promo.title|escape}</h5>{/if}
+                        {* if !empty($promo.body)}<p style="color: {$promo.color};">{$promo.body|escape}</p>{/if *}
+                    </a>
+                </li>{/foreach}
+            </ul>
+        </section>
+    {/if}
+
+    <!-- plugin hook: 'frontend_homepage' -->
+    {* @event frontend_homepage.%plugin_id% *}
+    {foreach $frontend_homepage as $_}{$_}{/foreach}
+
+    <!-- BESTSELLERS product list -->
+    {if $bestsellers}
+
+        <section class="bestsellers">
+            {if $theme_settings.homepage_bestsellers_title}
+                <h5 class="bestsellers-header">{str_replace('{$date}', $smarty.now|wa_datetime:"humandate", $theme_settings.homepage_bestsellers_title)}</h5>
+            {/if}
+            {include file="list-thumbs.html" products=$bestsellers}
+        </section>
+
+    {else}
+        <p class="hint align-center"><br><em>{sprintf('[`In your store backend, drag some products into <strong>%s</strong> product list (which is in the left sidebar of the Products screen), and these products will be automatically published here — right on your storefront homepage.`]', $theme_settings.homepage_productset_bestsellers|escape|default:'()' )}</em></p>
+    {/if}
+
+</div>
+
+<div class="clear-both"></div>
+
+<!-- WELCOME note -->
+{if !empty($theme_settings.homepage_welcome_note)}
+    <figure class="olives">
+        <div class="olives-left">
+        <div class="olives-right">
+            <div class="olives-content">
+                {$theme_settings.homepage_welcome_note}
+            </div>
+        </div>
+        </div>
+    </figure>
+{/if}
+
+<!-- ON SALE product list -->
+{if !empty($theme_settings.homepage_productset_onsale)}
+
+    {$onsale = $wa->shop->productSet( $theme_settings.homepage_productset_onsale )}
+
+    {if !empty($onsale)}
+        <section class="onsale related">
+            {if $theme_settings.homepage_onsale_title}
+                <h4 class="section-header">{str_replace('{$date}', $smarty.now|wa_datetime:"humandate", $theme_settings.homepage_onsale_title)}</h4>
+            {/if}
+            {include file="list-thumbs-mini.html" products=$onsale ulclass="onsale-bxslider"}
+        </section>
+    {/if}
+
+{/if}
+
+<!-- BLOG posts -->
+{if $theme_settings.homepage_blogposts && $wa->blog}
+
+    {$blog_posts = $wa->blog->posts(null,4)}
+    {if count($blog_posts)}
+
+        <h4 class="section-header">[`Latest blog updates`]</h4>
+        <ul class="thumbs text-content">
+        {foreach $blog_posts as $post}
+            <li>
+                <a href="{$post.link}" class="bold">{$post.title}</a>
+                <p class="small">{strip_tags($post.text)|truncate:128}</p>
+                <span class="hint">{$post.datetime|wa_datetime:"humandate"}</span>
+            </li>
+        {/foreach}
+        </ul>
+    {/if}
+{/if}

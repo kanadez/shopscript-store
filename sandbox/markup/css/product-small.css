@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09.07.2018, 19:18:25
+    Author     : x
+*/
+
+.product_title {
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(135, 198, 190, 1.0);
+    width: 200px;
+    position: absolute;
+    top: 22px;
+    margin-left: -80px;
+    z-index: 9;
+}
+
+.product_description {
+    color: #050505;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: -80px;
+    width: 31%;
+    margin-top: -348px;
+}
+
+#add_to_cart {
+    margin-left: -80px;
+    margin-top: 55px;
+    position: inherit;
+}

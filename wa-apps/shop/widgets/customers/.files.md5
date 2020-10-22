@@ -1,0 +1,16 @@
+9e99991c1481c1971d786c40d10d190e *css/oneline.css
+0047e5a9d00b070b33ec475a52d341b3 *img/customers.png
+3182b4d9bcd3c590205fdb4e7eda77cd *js/customersGraph.js
+a1751e1f10a3b96b05d0401c97e72008 *lib/.htaccess
+e17c7bff29c4a2a101dec335fa05b209 *lib/config/build.php
+e58b3e861f3ffad203fed3033ba126e7 *lib/config/settings.php
+ed3cae87ab8c6795ce888fd9ed498ca9 *lib/config/widget.php
+498a3b1a117a9fd261d1141f68d35b93 *lib/shopCustomers.widget.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+a2f6d9eb673faadabb26661b9de53104 *locale/en_US/LC_MESSAGES/shop_widget_customers.mo
+6fcc332f76013313db22b5ccd04ffd04 *locale/en_US/LC_MESSAGES/shop_widget_customers.po
+6c6ad7b67b49c40093ce30336a0e652c *locale/ru_RU/LC_MESSAGES/shop_widget_customers.mo
+ab6df826545444aeb498b7b7683d12c2 *locale/ru_RU/LC_MESSAGES/shop_widget_customers.po
+a1751e1f10a3b96b05d0401c97e72008 *templates/.htaccess
+9bde2fb381ee34969ed8ffb13cf0c471 *templates/OneLine.html
+6c046cbaf6fe494dd1c9bee7fd28418a *templates/Pie.html

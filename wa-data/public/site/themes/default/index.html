@@ -1,0 +1,286 @@
+{function active_or_not}
+    {$current_url = $wa->currentUrl()}
+    {$exploded = explode("|", $url)}
+    
+    {foreach $exploded as $e}
+        {if strpos($current_url, $e) != false}
+            {'class="active"'}
+        {/if}
+    {/foreach}
+{/function}
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Переключение IE в последнию версию, на случай если в настройках пользователя стоит меньшая -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Адаптирование страницы для мобильных устройств -->
+    <meta name="viewport" content="width=1024">
+
+    <!-- Запрет распознования номера телефона -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+    <!-- Заголовок страницы -->
+    <title>{$wa->title()|escape}</title>
+
+    <!-- Данное значение часто используют(использовали) поисковые системы -->
+    <meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
+    <meta name="Description" content="{$wa->meta('description')|escape}" />
+
+    <!-- Традиционная иконка сайта, размер 16x16, прозрачность поддерживается. Рекомендуемый формат: .ico или .png -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    {include file="`$wa_active_theme_path`/head.html" inline}
+    
+    <!-- Обучение старых версий IE тегам html5 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <!-- Шапка -->
+            <div class="header_abs">
+                <header class="header_lk">
+                    <div class="top_line">
+                        <div class="left firstscreencopy">
+                            <div class="sector_menu left">
+                                <div class="bng_close"></div>
+                                <div class="burger menu-trigger">
+                                    <a href="javascript:void(0)" class="mob_menu_link"></a>
+                                </div>
+                            </div>
+                            <a href="/" class="asset2">
+                                <img class="shape13" src="{$wa_theme_url}images/logo/first-screen-shape 13@2x.png">
+                                <img class="shape14" src="{$wa_theme_url}images/logo/first-screen-copy-shape 14@2x.png">
+                                <img class="shape15" src="{$wa_theme_url}images/logo/catalog-shape 2@2x.png">
+                                <img class="shape16" src="{$wa_theme_url}images/logo/first-screen-copy-shape 16@2x.png">
+                                <img class="shape17" src="{$wa_theme_url}images/logo/pixel-copy-shape 4@2x.png">
+                                <img class="shape18" src="{$wa_theme_url}images/logo/first-screen-copy-shape 18@2x.png">
+                                <img class="shape19" src="{$wa_theme_url}images/logo/pixel-copy-shape 6@2x.png">
+                                <img class="shape20" src="{$wa_theme_url}images/logo/first-screen-copy-shape 20@2x.png">
+                                <img class="shape21" src="{$wa_theme_url}images/logo/pixel-copy-shape 8@2x.png">
+                                <img class="shape22" src="{$wa_theme_url}images/logo/first-screen-copy-shape 22@2x.png">
+                                <img class="shape23" src="{$wa_theme_url}images/logo/first-screen-shape 23@2x.png">
+                                <img class="shape24" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 11@2x.png">
+                                <img class="shape25" src="{$wa_theme_url}images/logo/first-screen-shape 25@2x.png">
+                                <img class="shape26" src="{$wa_theme_url}images/logo/catalog-shape 13@2x.png">
+                                <img class="shape27" src="{$wa_theme_url}images/logo/pixel-copy-shape 14@2x.png">
+                                <img class="shape28" src="{$wa_theme_url}images/logo/catalog-shape 15@2x.png">
+                                <img class="shape29" src="{$wa_theme_url}images/logo/first-screen-shape 29@2x.png">
+                                <img class="shape30" src="{$wa_theme_url}images/logo/first-screen-copy-shape 30@2x.png">
+                                <img class="shape31" src="{$wa_theme_url}images/logo/pixel-copy-shape 18@2x.png">
+                                <img class="shape32" src="{$wa_theme_url}images/logo/first-screen-copy-shape 32@2x.png">
+                                <img class="shape33" src="{$wa_theme_url}images/logo/pixel-copy-shape 20@2x.png">
+                                <img class="shape34" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 21@2x.png">
+                                <img class="shape35" src="{$wa_theme_url}images/logo/pixel-copy-shape 22@2x.png">
+                                <img class="shape36" src="{$wa_theme_url}images/logo/catalog-shape 23@2x.png">
+                                <img class="shape37" src="{$wa_theme_url}images/logo/first-screen-shape 37@2x.png">
+                                <img class="shape38" src="{$wa_theme_url}images/logo/catalog-shape 25@2x.png">
+                                <img class="shape39" src="{$wa_theme_url}images/logo/first-screen-shape 39@2x.png">
+                                <img class="shape40" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 27@2x.png">
+                                <img class="shape41" src="{$wa_theme_url}images/logo/first-screen-copy-shape 41@2x.png">
+                                <img class="shape42" src="{$wa_theme_url}images/logo/catalog-shape 29@2x.png">
+                                <img class="shape43" src="{$wa_theme_url}images/logo/pixel-copy-shape 30@2x.png">
+                                <img class="shape44" src="{$wa_theme_url}images/logo/first-screen-shape 44@2x.png">
+                                <img class="shape45" src="{$wa_theme_url}images/logo/first-screen-shape 46@2x.png">
+                                <img class="shape46" src="{$wa_theme_url}images/logo/first-screen-shape 46@2x.png">
+                                <img class="shape47" src="{$wa_theme_url}images/logo/first-screen-copy-shape 49@2x.png">
+                                <img class="shape48" src="{$wa_theme_url}images/logo/catalog-shape 37@2x.png">
+                                <img class="shape49" src="{$wa_theme_url}images/logo/first-screen-copy-shape 49@2x.png">
+                                <img class="shape50" src="{$wa_theme_url}images/logo/catalog-shape 37@2x.png">
+                                <img class="shape51" src="{$wa_theme_url}images/logo/first-screen-copy-shape 51@2x.png">
+                                <img class="shape52" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 39@2x.png">
+                                <img class="shape53" src="{$wa_theme_url}images/logo/first-screen-copy-shape 53@2x.png">
+                                <img class="shape54" src="{$wa_theme_url}images/logo/pixel-copy-shape 41@2x.png">
+                                <img class="shape55" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 42@2x.png">
+                                <img class="shape56" src="{$wa_theme_url}images/logo/first-screen-shape 56@2x.png">
+                                <img class="shape57" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 44@2x.png">
+                                <img class="shape58" src="{$wa_theme_url}images/logo/first-screen-shape 58@2x.png">
+                                <img class="shape59" src="{$wa_theme_url}images/logo/catalog-shape 46@2x.png">
+                                <img class="shape60" src="{$wa_theme_url}images/logo/first-screen-shape 60@2x.png">
+                                <img class="shape61" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 48@2x.png">
+                                <img class="shape62" src="{$wa_theme_url}images/logo/first-screen-shape 62@2x.png">
+                                <img class="shape63" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 50@2x.png">
+                                <img class="shape64" src="{$wa_theme_url}images/logo/pixel-copy-shape 51@2x.png">
+                                <img class="shape65" src="{$wa_theme_url}images/logo/first-screen-copy-shape 65@2x.png">
+                                <img class="shape66" src="{$wa_theme_url}images/logo/pixel-copy-shape 53@2x.png">
+                                <img class="shape67" src="{$wa_theme_url}images/logo/catalog-shape 54@2x.png">
+                                <img class="shape68" src="{$wa_theme_url}images/logo/first-screen-shape 68@2x.png">
+                                <img class="shape69" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 56@2x.png">
+                                <img class="shape70" src="{$wa_theme_url}images/logo/first-screen-shape 70@2x.png">
+                                <img class="shape71" src="{$wa_theme_url}images/logo/catalog-shape 58@2x.png">
+                                <img class="shape72" src="{$wa_theme_url}images/logo/first-screen-shape 72@2x.png">
+                                <img class="shape73" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 60@2x.png">
+                                <img class="shape74" src="{$wa_theme_url}images/logo/pixel-copy-shape 61@2x.png">
+                                <img class="shape75" src="{$wa_theme_url}images/logo/first-screen-copy-shape 75@2x.png">
+                                <img class="shape76" src="{$wa_theme_url}images/logo/first-screen-shape 76@2x.png">
+                                <img class="shape77" src="{$wa_theme_url}images/logo/first-screen-copy-shape 77@2x.png">
+                                <img class="shape78" src="{$wa_theme_url}images/logo/pixel-copy-shape 65@2x.png">
+                                <img class="shape79" src="{$wa_theme_url}images/logo/first-screen-copy-shape 79@2x.png">
+                                <img class="shape80" src="{$wa_theme_url}images/logo/pixel-copy-shape 67@2x.png">
+                                <img class="shape81" src="{$wa_theme_url}images/logo/first-screen-shape 81@2x.png">
+                                <img class="shape82" src="{$wa_theme_url}images/logo/pixel-copy-shape 69@2x.png">
+                                <img class="shape83" src="{$wa_theme_url}images/logo/first-screen-shape 83@2x.png">
+                                <img class="shape84" src="{$wa_theme_url}images/logo/first-screen-copy-shape 84@2x.png">
+                                <img class="shape85" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 72@2x.png">
+                                <img class="shape86" src="{$wa_theme_url}images/logo/first-screen-copy-shape 86@2x.png">
+                                <img class="shape87" src="{$wa_theme_url}images/logo/first-screen-copy-2-shape 74@2x.png">
+                                <img class="shape88" src="{$wa_theme_url}images/logo/first-screen-copy-shape 88@2x.png">
+                                <img class="shape89" src="{$wa_theme_url}images/logo/catalog-shape 76@2x.png">
+                                <img class="shape90" src="{$wa_theme_url}images/logo/pixel-copy-shape 77@2x.png">
+                                <img class="shape91" src="{$wa_theme_url}images/logo/first-screen-shape 91@2x.png">
+                                <img class="shape92" src="{$wa_theme_url}images/logo/pixel-copy-shape 79@2x.png">
+                            </a>
+                            <div class="top_menu leftside">
+                                <a href="/shop" {active_or_not url="category"}>Каталог</a>  
+                                <a href="/shop/skidki" {active_or_not url="skidki|discounts"}>Скидки</a>  
+                                <a href="/oplata-i-dostavka" {active_or_not url="oplata-i-dostavka"}>Оплата и доставка</a>
+                                <!--<a href="#" class="button">Индивидуальный заказ</a>-->
+                            </div>
+                        </div>
+                        <div class="right firstscreencopy">
+                            <div class="profile left">
+                                <div class="mini_modal" id="modal_logon">
+                                    <a href="/">Выход</a>
+                                </div>
+                            </div>
+                            <div class="cart left top_menu">
+                                {$cart_count = $wa->shop->cart->count()}
+                                <a href="/shop/cart" {active_or_not url="cart"}>Корзина ({$cart_count})</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </header>
+                <!-- End Шапка -->
+            </div>
+
+            {include file="`$wa_active_theme_path`/main.html" inline}
+        </div>
+
+        <!-- Подвал -->
+        <footer>
+            <a href="tel:+70000000000" class="contact">+7 (000) 000-00-00</a>
+        </footer>
+        <!-- End Подвал -->
+    </div>
+    
+    <main>
+            <div id="content-2" class="content content--switch">
+                    <h2 class="content__title">Помощь</h2>
+                    <p class="content__text">Synchronising customer experience and possibly increase viewability. Driving bleeding edge with the aim to make users into advocates. Generating below the line so that as an end result, we increase viewability. Executing thought leadership and try to improve overall outcomes. Growing below the fold so that we create actionable insights. Considering responsive websites yet make users into advocates.</p>
+            </div>
+            <div id="content-3" class="content content--switch">
+                    <h2 class="content__title">Доставка и оплата</h2>
+                    <p class="content__text">Informing vertical integration while remembering to funnel users. Take thought leadership with the possibility to surprise and delight. Target analytics to in turn infiltrate new markets. Demonstrate audience segments so that as an end result, we think outside the box. Create analytics in order to make the logo bigger.</p>
+            </div>
+            <div id="content-4" class="content content--switch">
+                    <h2 class="content__title">Индивидуальный заказ</h2>
+                    <p class="content__text">Utilising growth hacking in order to get buy in. Repurposing stakeholder management while remembering to re-target key demographics. Grow vertical integration to, consequently, create synergy. Synchronising custom solutions with the aim to gain traction. Amplifying branding to, consequently, re-target key demographics.</p>
+            </div>
+            <div id="content-5" class="content content--switch">
+                    <h2 class="content__title">Скидка</h2>
+                    <p class="content__text">Leverage outside the box thinking to in turn re-target key demographics. Build empathy maps with the possibility to re-target key demographics. Informing key demographics yet make users into advocates. Leveraging customer journeys and above all, maximise share of voice. Amplifying awareness with a goal to re-target key demographics.</p>
+            </div>
+            <div id="content-6" class="content content--switch">
+                    <h2 class="content__title">Каталог</h2>
+                    <p class="content__text">Amplifying below the fold in order to think outside the box. Leveraging innovation and above all, build ROI. Synchronise responsive websites but disrupt the balance. Synchronise innovation to, consequently, funnel users. Create above the fold in order to be on brand. Amplify awareness with a goal to infiltrate new markets.</p>
+            </div>
+            <nav class="grim">
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--1"></div>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--2"></div>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--3"></div>
+                            <div class="grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <button class="menu-trigger menu-trigger--close">- Выход</button>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--4"></div>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--5"></div>
+                            <a href="#" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Контакты</h3>
+                                    </div>
+                            </a>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--6"></div>
+                            <a href="#" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Помощь</h3>
+                                            <span class="grim__item-desc"></span>
+                                    </div>
+                            </a>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--7"></div>
+                            <a href="/oplata-i-dostavka" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Доставка и оплата</h3>
+                                            <span class="grim__item-desc"></span>
+                                    </div>
+                            </a>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--8"></div>
+                            <a href="/shop/skidki" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Скидка</h3>
+                                            <span class="grim__item-desc"></span>
+                                    </div>
+                            </a>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--9"></div>
+                            <a href="#" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Индивидуальный заказ</h3>
+                                            <span class="grim__item-desc"></span>
+                                    </div>
+                            </a>
+                    </div>
+                    <div class="grim__item">
+                            <div class="grim__item-bg grim__item-bg--10" data-duration="1000" data-easing="easeOutQuint"></div>
+                            <a href="/shop" class="grim__link grim__item-content">
+                                    <div class="grim__item-inner">
+                                            <h3 class="grim__item-title">Каталог</h3>
+                                            <span class="grim__item-desc"></span>
+                                    </div>
+                            </a>
+                    </div>
+            </nav>
+    </main>
+
+    <div class="modal_advice">
+            <div class="info">
+                    <div class="tablet"></div>
+                    <div class="title">
+                            Для удобства, пожалуйста, поверните свой девайс в горизонтальное положение
+                    </div>
+                    <div class="close">
+                            <a href="#">ОК</a>
+                    </div>
+                    <div class="not_show">
+                            <a href="#">больше не показывать эту подсказку</a>
+                    </div>
+            </div>
+    </div>
+
+    {include file="`$wa_active_theme_path`/footer.html" inline}
+
+</body>
+</html>

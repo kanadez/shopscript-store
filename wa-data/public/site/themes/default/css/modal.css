@@ -1,0 +1,137 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31.07.2018, 15:27:38
+    Author     : x
+*/
+
+.modal{
+    display: none;
+    padding: 32px 30px 100px 36px;
+    width: 800px;
+    background: #fff;
+    border-radius: 0px;
+    height: 200px;
+}
+
+.modal > .left{
+    float: left;
+}
+
+.modal > .clear {
+    clear: both;
+}
+
+.modal .title{
+    width: 100%;
+    height: 111px;
+    overflow: hidden;
+}
+
+.modal.warning{
+    height: 318px;
+    width: 285px;
+    padding: 104px 45px;
+    overflow: visible !important;
+    border-radius: 0;
+    border: none;
+    background-color: #fffede;
+}
+
+.modal.error{
+    height: 318px;
+    width: 285px;
+    padding: 104px 45px;
+    overflow: visible !important;
+    border-radius: 0;
+    border: none;
+    background-color: #ffeaea;
+}
+
+.modal.big{
+    height: 518px;
+    width: 608px;
+    padding: 42px 45px;
+    overflow: visible !important;
+    border-radius: 0;
+    border: none;
+}
+
+.modal.big .title {
+    width: 29px;
+    height: 29px;
+    margin-top: 250px;
+    margin-bottom: 94px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(135, 198, 190, 1.0);
+    text-align: left;
+    line-height: 42.0px;
+    overflow: visible;
+    float: left;
+    margin-right: 49px;
+}
+
+.modal.big .form-group{
+    padding: 5px 0;
+    margin-left: 78px;
+}
+
+.modal.big .hr{
+    width: 433px;
+    height: 3px;
+    margin-top: 29px;
+    background-color: #87c6be;
+    margin-bottom: 11px;
+}
+
+.modal.big input{
+    font-family: Montserrat;
+    height: 37px;
+    width: 432px;
+    border-radius: 2px;
+    border-style: solid;
+    padding: 10px;
+    border-width: 1px;
+    border-color: rgba(135,198,190,1.0);
+}
+
+.modal.big input[type="submit"]{
+    width: 100px;
+    line-height: 15px;
+    float: right;
+    cursor: pointer;
+}
+
+.modal.big .subtitle{
+    background-color: rgba(255,255,255,0.0);
+    font-family: 'Yeseva One',Helvetica,Arial,serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20.0px;
+    color: rgba(5,5,5,1.0);
+    letter-spacing: .72px;
+    line-height: 54.0px;
+    text-transform: uppercase;
+}
+
+#auth_modal{
+    height: 616px;
+}
+
+#auth_modal.expanded{
+    height: 712px;
+}
+
+#auth_modal.reduced{
+    height: 374px;
+}

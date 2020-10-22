@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="{$wa_theme_url}css/product-small.css">
+
+<section class="product">
+    <div class="showcase">
+        <div class="center">
+            <div class="product_content">
+                <h1 class="product_title">
+                    {$product.name|escape}
+                </h1>
+                <h2 class="product_description">{$product.summary}</h2>
+                <div class="images_slider {if count($product.images) > 1}padding{/if}">
+                    <div class="vertical-center-4 slider">
+                        <div>
+                            {$wa->shop->productImgHtml($product, '750', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $product.name|escape ])}
+                        </div>
+                        {if count($product.images) > 1}
+                            {foreach $product.images as $image}
+                                <div>
+                                    {$wa->shop->imgHtml($image, '750')}
+                                </div>
+                            {/foreach}
+                        {/if}
+                    </div>
+                </div>
+                {if !empty($product.compare_price)}
+                <div class="product_price"><s>{$product.compare_price}</s>&nbsp;<b>{$product.price} {translateCurrency currency=$product.currency}</b></div>
+                {else}
+                <div class="product_price">{$product.price} {translateCurrency currency=$product.currency}</div>
+                {/if}
+                <a id="add_to_cart" data-added-success-text="Добавлено" data-added-fail-text="Ошибка" href="javascript:void(0)" onclick="product.addToCart({$product.id})" class="button_solid">В корзину</a>
+            </div>
+        </div>
+        {if $arrow_url = $wa->shop->getNextProduct($product)}
+        <a href="{$arrow_url}" class="right_arrow"></a>
+        {/if}           
+    </div>
+    <div class="social_panel">
+        <a href="" class="facebook"></a>
+        <a href="" class="instagram"></a>
+        <a href="" class="twitter"></a>
+    </div>
+</section>

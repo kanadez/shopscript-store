@@ -1,0 +1,60 @@
+{foreach $products as $p}
+<div class="{$wa->shop->productImgWrapperClass($p)}">
+    <div>
+        <a class="product_link" href="{$p.frontend_url}?from=discounts">
+            {$wa->shop->productImgHtml($p, '200', ['itemprop' => 'image', 'alt' => $p.name, 'default' => "`$wa_theme_url`img/dummy200.png"])}
+        </a>
+    </div>
+    <div>
+        <a class="product_link" href="{$p.frontend_url}?from=discounts">
+            <div class="product_title">{$p.name}</div>
+            <div class="product_price"><s>{$p.compare_price}</s>&nbsp;<b>{$p.price} руб.</b></div>
+        </a>
+    </div>
+</div>
+{/foreach}
+
+{if isset($pages_count) && $pages_count > 1}
+<div class="load_more_wrapper">
+    <a href="javascript:void(0)" id="load_more" class="button">Загрузить еще</a>
+</div>
+<div class="block lazyloading-paging" data-loading-str="[`Loading...`]" style="text-align: center;display: none;">
+    {wa_pagination total=$pages_count attrs=['class' => "menu-h"]}
+</div>
+{/if}
+
+<!--<div class="single">
+    <div></div>
+    <div>
+        <div class="product_title">Нашивка</div>
+        <div class="product_price">100 руб.</div>
+    </div>
+</div>
+<div class="double">
+    <div></div>
+    <div>
+        <div class="product_title">Нашивка</div>
+        <div class="product_price">100 руб.</div>
+    </div>
+</div>
+<div class="single">
+    <div></div>
+    <div>
+        <div class="product_title">Нашивка</div>
+        <div class="product_price">100 руб.</div>
+    </div>
+</div>
+<div class="single">
+    <div></div>
+    <div>
+        <div class="product_title">Нашивка</div>
+        <div class="product_price">100 руб.</div>
+    </div>
+</div>
+<div class="single">
+    <div></div>
+    <div>
+        <div class="product_title">Нашивка</div>
+        <div class="product_price">100 руб.</div>
+    </div>
+</div>-->

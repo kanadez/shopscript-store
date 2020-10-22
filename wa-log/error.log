@@ -1,0 +1,1535 @@
+
+2018-07-04 15:45:13 178.66.149.233
+Unable to instantiate widget app_id=webasyst widget=currencyquotes for user contact_id=1 (does not exist or no access to app)
+
+2018-07-04 15:45:13 178.66.149.233
+Unable to instantiate widget app_id=webasyst widget=traffic for user contact_id=1 (does not exist or no access to app)
+
+2018-07-07 09:53:46 212.48.201.131
+Error 0: Curl error: 28# Resolving timed out after 10518 milliseconds at [http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjguMiJ9&locale=ru_RU]
+
+2018-07-20 09:32:17 178.66.147.217
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 wa-system/config/waAppConfig.class.php(261): waModel->__construct()
+#4 wa-system/waSystem.class.php(96): waAppConfig->checkUpdates()
+#5 wa-system/waSystem.class.php(1701): waSystem::getInstance('webasyst', NULL, false)
+#6 wa-system/waSystem.class.php(551): wa('webasyst')
+#7 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#8 index.php(7): waSystem->dispatch()
+#9 {main}
+
+2018-07-21 18:11:02 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 7 &quot;{block cat = $cat}&quot; missing &quot;name&quot; attribute (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compilebase.php(105): Smarty_Internal_TemplateCompilerBase->trigger_template_error('missing "name" ...', 7)
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compile_block.php(54): Smarty_Internal_CompileBase->getAttributes(Object(Smarty_Internal_SmartyTemplateCompiler), Array)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(485): Smarty_Internal_Compile_Block->compile(Array, Object(Smarty_Internal_SmartyTemplateCompiler), Array, NULL, NULL)
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(259): Smarty_Internal_TemplateCompilerBase->callTagCompiler('block', Array, Array)
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(2388): Smarty_Internal_TemplateCompilerBase->compileTag('block', Array)
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r36()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce(36)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(10, '??        ')
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#19 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#20 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#21 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#22 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#23 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#24 {main}
+
+2018-07-21 18:16:31 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 7 &quot;{block cat = $cat}&quot; missing &quot;name&quot; attribute (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compilebase.php(105): Smarty_Internal_TemplateCompilerBase->trigger_template_error('missing "name" ...', 7)
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compile_block.php(54): Smarty_Internal_CompileBase->getAttributes(Object(Smarty_Internal_SmartyTemplateCompiler), Array)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(485): Smarty_Internal_Compile_Block->compile(Array, Object(Smarty_Internal_SmartyTemplateCompiler), Array, NULL, NULL)
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(259): Smarty_Internal_TemplateCompilerBase->callTagCompiler('block', Array, Array)
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(2388): Smarty_Internal_TemplateCompilerBase->compileTag('block', Array)
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r36()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce(36)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(10, '??        ')
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#19 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#20 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#21 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#22 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#23 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#24 {main}
+
+2018-07-21 19:29:46 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 26 &quot;{z}&quot; unknown tag &quot;z&quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(453): Smarty_Internal_TemplateCompilerBase->trigger_template_error('unknown tag "z"', 26)
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(2393): Smarty_Internal_TemplateCompilerBase->compileTag('z', Array)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r37()
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce(37)
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(10, '??        ')
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#19 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#20 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#21 {main}
+
+2018-07-21 19:31:12 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 46 &quot;{$z += 1}&quot;  - Unexpected &quot;= &quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, '= ')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, '= ')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-07-22 17:12:23 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 106 &quot;{$times_to_show = Math.ceil(count($design_cat_name)/8)}&quot;  - Unexpected &quot;.&quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(59, '.')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(59, '.')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-07-22 17:14:52 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 98 &quot;{for $ = 0; $ &lt; $times_to_show; $i++}&quot;  - Unexpected &quot; = &quot;, expected one of: &quot;{&quot; , &quot;identifier&quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, ' = ')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, ' = ')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{$embroidery_ca...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-07-22 18:35:15 78.37.235.181
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/home.html&quot;  on line 76 &quot;{/function}&quot; unclosed {function} tag (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compilebase.php(166): Smarty_Internal_TemplateCompilerBase->trigger_template_error('unclosed {funct...')
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compile_if.php(197): Smarty_Internal_CompileBase->closeTag(Object(Smarty_Internal_SmartyTemplateCompiler), Array)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(475): Smarty_Internal_Compile_Ifclose->compile(Array, Object(Smarty_Internal_SmartyTemplateCompiler), Array, NULL, NULL)
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(259): Smarty_Internal_TemplateCompilerBase->callTagCompiler('ifclose', Array, Array)
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(2493): Smarty_Internal_TemplateCompilerBase->compileTag('ifclose', Array)
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r58()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce(58)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(10, '??')
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{$embroidery_ca...')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:home.html', NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:home.html', NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendAction))
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#19 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#20 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#21 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#22 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/')
+#23 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#24 {main}
+
+2018-07-24 19:07:27 91.122.131.217
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/site/themes/default/head.html&quot;  on line 15 &quot;&lt;script&gt;document.documentElement.className=&quot;js&quot;;var supportsCssVars=function(){var e,t=document.createElement(&quot;style&quot;);return t.innerHTML=&quot;root: { --tmp-var: bold; }&quot;,document.head.appendChild(t),e=!!(window.CSS&amp;&amp;window.CSS.supports&amp;&amp;window.CSS.supports(&quot;font-weight&quot;,&quot;var(--tmp-var)&quot;)),t.parentNode.removeChild(t),e};supportsCssVars()||alert(&quot;Please view this demo in a modern browser that supports CSS Variables.&quot;);&lt;/script&gt;&quot;  - Unexpected &quot;,&quot;, expected one of: &quot;}&quot; , &quot; &quot; , ATTR (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(37, ',')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(37, ',')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<!-- put your S...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(286): Smarty_Internal_TemplateBase->fetch(NULL, NULL, NULL, NULL, false, false, true)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-cache/apps/site/templates/compiled/site_ru_RU/69/2d/66/692d66cca659589c71f24c8a9c978bd3cafdbee1.file.index.html.php(55): Smarty_Internal_Template->getSubTemplate('/var/www/www-ro...', NULL, 'site_ru_RU', NULL, NULL, Array, 0)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(180): content_5b4f51371b0282_71021003(Object(Smarty_Internal_Template))
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(siteFrontendController), NULL)
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', '')
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend(false)
+#19 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#20 {main}
+
+2018-07-25 11:37:09 78.37.255.220
+Error 0: Curl error: 7# Failed connect to www.webasyst.com:80; В соединении отказано at [http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjguMiJ9&locale=ru_RU]
+
+2018-07-25 19:27:14 78.37.255.220
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/product.html&quot;  on line 26 &quot;&lt;div class=&quot;product_price&quot;&gt;{$product.price $product.currency}&lt;/div&gt;&quot; too many shorthand attributes (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compilebase.php(71): Smarty_Internal_TemplateCompilerBase->trigger_template_error('too many shorth...', 26)
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_compile_private_print_expression.php(46): Smarty_Internal_CompileBase->getAttributes(Object(Smarty_Internal_SmartyTemplateCompiler), Array)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(475): Smarty_Internal_Compile_Private_Print_Expression->compile(Array, Object(Smarty_Internal_SmartyTemplateCompiler), Array, NULL, NULL)
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(259): Smarty_Internal_TemplateCompilerBase->callTagCompiler('private_print_e...', Array, Array)
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(2363): Smarty_Internal_TemplateCompilerBase->compileTag('private_print_e...', Array, Array)
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3101): Smarty_Internal_Templateparser->yy_r29()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3201): Smarty_Internal_Templateparser->yy_reduce(29)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(10, '</div>?        ...')
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('<link rel="styl...')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:product.ht...', NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:product.ht...', NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendProduct.controller.php(49): waViewController->executeAction(Object(shopFrontendProductAction))
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): shopFrontendProductController->execute()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#18 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#19 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(shopFrontendProductController), NULL)
+#20 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'product')
+#21 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#22 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/3-3-1-1/')
+#23 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#24 {main}
+
+2018-07-25 19:43:53 78.37.255.220
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/product.html&quot;  on line 2 &quot;{$currency_translates = [}&quot;  - Unexpected &quot;}&quot;, expected one of: &quot;&quot;,&quot;&quot; , &quot;]&quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(17, '}')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(17, '}')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function trans...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:product.ht...', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:product.ht...', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendProduct.controller.php(49): waViewController->executeAction(Object(shopFrontendProductAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): shopFrontendProductController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(shopFrontendProductController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'product')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/3-3-1-1/')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-07-29 15:17:04 78.37.232.168
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/site/themes/default/index.html&quot;  on line 5 &quot;{class=&quot;active&quot;}&quot;  - Unexpected &quot;=&quot;, expected one of: &quot;}&quot; , &quot; &quot; , ATTR (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, '=')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, '=')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function activ...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/category/d...')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#17 {main}
+
+2018-07-29 15:17:12 78.37.232.168
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/site/themes/default/index.html&quot;  on line 5 &quot;{class=&quot;active&quot;}&quot;  - Unexpected &quot;=&quot;, expected one of: &quot;}&quot; , &quot; &quot; , ATTR (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, '=')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, '=')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function activ...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/category/d...')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#17 {main}
+
+2018-07-29 15:18:00 78.37.232.168
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/site/themes/default/index.html&quot;  on line 5 &quot;{class=&quot;active&quot;}&quot;  - Unexpected &quot;=&quot;, expected one of: &quot;}&quot; , &quot; &quot; , ATTR (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, '=')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, '=')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function activ...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/category/d...')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#17 {main}
+
+2018-07-29 15:18:45 78.37.232.168
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/site/themes/default/index.html&quot;  on line 5 &quot;{class=&quot;active&quot;}&quot;  - Unexpected &quot;=&quot;, expected one of: &quot;}&quot; , &quot; &quot; , ATTR (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(20, '=')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(20, '=')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function activ...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/category/d...')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#17 {main}
+
+2018-08-04 18:38:12 178.71.190.165
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/product.html&quot;  on line 10 &quot;{$template_file = product_big.html}&quot;  - Unexpected &quot;.&quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(59, '.')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(59, '.')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function trans...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:product.ht...', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:product.ht...', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendProduct.controller.php(49): waViewController->executeAction(Object(shopFrontendProductAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): shopFrontendProductController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(shopFrontendProductController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'product')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/gotovaya-v...')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-08-05 13:58:16 178.71.190.165
+Uncaught exception SmartyCompilerException:
+Syntax Error in template &quot;/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/themes/default/product.html&quot;  on line 9 &quot;{$template_file = $template == &quot;Большой&quot; ? &quot;product_big.html&quot; : &quot;product_small.html&quot;}&quot;  - Unexpected &quot; ? &quot; (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3144): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templateparser.php(3209): Smarty_Internal_Templateparser->yy_syntax_error(55, ' ? ')
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_smartytemplatecompiler.php(105): Smarty_Internal_Templateparser->doParse(55, ' ? ')
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatecompilerbase.php(206): Smarty_Internal_SmartyTemplateCompiler->doCompile('{function trans...')
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(187): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(164): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:product.ht...', NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:product.ht...', NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(139): waViewAction->display(false)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendProduct.controller.php(49): waViewController->executeAction(Object(shopFrontendProductAction))
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): shopFrontendProductController->execute()
+#12 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#13 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#14 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(shopFrontendProductController), NULL)
+#15 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'product')
+#16 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#17 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/3-1-1-1/')
+#18 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#19 {main}
+
+2018-08-07 15:57:11 91.122.188.42
+Uncaught exception SmartyException:
+Unable to load template file 'checkout_digital.shipping.html' (0)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('file:checkout_d...', NULL)
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(171): waSmarty3View->fetch('file:checkout_d...', NULL)
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCheckoutDigitalAction))
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'checkoutDigital')
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/checkout_d...')
+#11 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#12 {main}
+
+2018-08-07 17:46:43 91.122.188.42
+test message
+
+2018-08-07 17:49:08 91.122.188.42
+Конон Игорь
+
+2018-08-07 17:49:30 91.122.188.42
+
+
+2018-08-07 17:50:53 91.122.188.42
+Конон Игорь
+
+2018-08-07 18:01:27 91.122.188.42
+Array
+
+2018-08-08 16:30:25 178.70.52.2
+createOrder()
+
+2018-08-08 16:30:25 178.70.52.2
+Array
+
+2018-08-08 16:31:22 178.70.52.2
+createOrder()
+
+2018-08-08 16:34:36 178.70.52.2
+createOrder()
+
+2018-08-08 16:34:36 178.70.52.2
+shipping Array
+
+2018-08-08 16:34:36 178.70.52.2
+payment 1
+
+2018-08-08 16:44:10 178.70.52.2
+createOrder()
+
+2018-08-08 16:44:10 178.70.52.2
+{"shipping":{"id":3,"rate_id":"delivery","name":"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0430","plugin":null},"payment":1}
+
+2018-08-08 16:48:07 178.70.52.2
+createOrder() Digital
+
+2018-08-08 16:48:07 178.70.52.2
+null
+
+2018-08-08 16:58:28 178.70.52.2
+createOrder() Digital
+
+2018-08-08 16:58:28 178.70.52.2
+null
+
+2018-08-08 17:01:12 178.70.52.2
+createOrder() Digital
+
+2018-08-08 17:01:12 178.70.52.2
+{"payment":1}
+
+2018-08-08 17:04:28 178.70.52.2
+createOrder() Digital
+
+2018-08-08 17:04:28 178.70.52.2
+{"payment":1}
+
+2018-08-08 17:05:23 178.70.52.2
+createOrder() Digital
+
+2018-08-08 17:05:23 178.70.52.2
+{"payment":1}
+
+2018-08-08 17:17:37 178.70.52.2
+createOrder() Digital
+
+2018-08-08 17:17:37 178.70.52.2
+{"payment":1}
+
+2018-08-08 17:35:47 178.70.52.2
+createOrder() Digital
+
+2018-08-08 17:35:47 178.70.52.2
+{"payment":1}
+
+2018-08-08 18:09:14 178.70.52.2
+createOrder() Digital
+
+2018-08-08 18:09:14 178.70.52.2
+{"payment":1}
+
+2018-08-08 19:54:11 178.70.52.2
+createOrder() Digital
+
+2018-08-08 19:54:11 178.70.52.2
+{"payment":1}
+
+2018-08-08 20:04:09 178.70.52.2
+createOrder() Digital
+
+2018-08-08 20:04:09 178.70.52.2
+{"payment":1}
+
+2018-08-11 19:03:45 89.20.1.236
+createOrder() Digital
+
+2018-08-11 19:03:45 89.20.1.236
+{"payment":1}
+
+2018-08-11 19:36:06 89.20.1.236
+1
+
+2018-08-11 19:38:37 89.20.1.236
+
+
+2018-08-11 19:40:08 89.20.1.236
+
+
+2018-08-11 19:40:36 89.20.1.236
+{"id":"#10030","contact_id":"8","create_datetime":"2018-08-11 19:03:46","update_datetime":null,"state_id":"new","total":"3.0000","currency":"RUB","rate":"1.00000000","tax":"0.0000","shipping":"0.0000","discount":"0.0000","assigned_contact_id":null,"paid_year":null,"paid_quarter":null,"paid_month":null,"paid_date":null,"is_first":"0","unsettled":"0","comment":"","shipping_datetime":null,"_id":"30"}
+
+2018-08-11 19:40:59 89.20.1.236
+null
+
+2018-08-11 19:45:13 89.20.1.236
+null
+
+2018-08-11 19:49:26 89.20.1.236
+null
+
+2018-08-11 19:54:36 89.20.1.236
+null
+
+2018-08-12 11:23:37 178.71.0.44
+null
+
+2018-08-12 12:02:44 178.71.0.44
+null
+
+2018-08-12 12:05:33 178.71.0.44
+null
+
+2018-08-12 12:14:21 178.71.0.44
+null
+
+2018-08-12 12:48:21 178.71.0.44
+null
+
+2018-08-12 12:48:39 178.71.0.44
+null
+
+2018-08-12 12:49:37 178.71.0.44
+null
+
+2018-08-12 13:52:31 178.71.0.44
+null
+
+2018-08-12 13:52:52 178.71.0.44
+null
+
+2018-08-12 13:52:54 178.71.0.44
+null
+
+2018-08-12 13:53:17 178.71.0.44
+null
+
+2018-08-12 13:53:18 178.71.0.44
+null
+
+2018-08-12 13:53:23 178.71.0.44
+null
+
+2018-08-12 13:53:57 178.71.0.44
+null
+
+2018-08-12 13:54:08 178.71.0.44
+null
+
+2018-08-12 13:55:53 178.71.0.44
+createOrder() Digital
+
+2018-08-12 13:55:53 178.71.0.44
+{"payment":1}
+
+2018-08-12 13:55:59 178.71.0.44
+"    \u041e\u043f\u043b\u0430\u0442\u0438\u0442\u0435 \u0432\u0430\u0448\u0438\u043c \u043a\u043e\u0448\u0435\u043b\u044c\u043a\u043e\u043c \u0432 \u00ab\u042f\u043d\u0434\u0435\u043a\u0441.\u0414\u0435\u043d\u044c\u0433\u0430\u0445\u00bb:<br>\n    <iframe frameborder=\"0\" allowtransparency=\"true\" scrolling=\"no\"\n        src=\"https:\/\/money.yandex.ru\/embed\/small.xml?account=410015206738711&quickpay=small&yamoney-payment-type=on&button-text=01&button-size=l&button-color=orange&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%20%2310031&default-sum=3&successURL=http%3A%2F%2Fftf.metateg.pro%2Fshop%2Fcheckout%2Fsuccess%2F%3Forder_id%3D31&label=shop_410015206738711_31\"\n        width=\"228\" height=\"54\">\n\n    <\/iframe><br>\n    \u0438\u043b\u0438 \u0431\u0430\u043d\u043a\u043e\u0432\u0441\u043a\u043e\u0439 \u043a\u0430\u0440\u0442\u043e\u0439:<br>\n\n    <iframe frameborder=\"0\" allowtransparency=\"true\" scrolling=\"no\"\n            src=\"https:\/\/money.yandex.ru\/embed\/small.xml?account=410015206738711&quickpay=small&any-card-payment-type=on&button-text=01&button-size=l&button-color=orange&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%20%2310031&default-sum=3&successURL=http%3A%2F%2Fftf.metateg.pro%2Fshop%2Fcheckout%2Fsuccess%2F%3Forder_id%3D31&label=shop_410015206738711_31\"\n            width=\"228\" height=\"54\">\n\n    <\/iframe>\n"
+
+2018-08-12 13:58:12 178.71.0.44
+null
+
+2018-08-12 13:58:23 178.71.0.44
+null
+
+2018-08-12 14:04:45 178.71.0.44
+null
+
+2018-08-12 14:04:48 178.71.0.44
+null
+
+2018-08-12 14:05:11 178.71.0.44
+null
+
+2018-08-12 14:05:28 178.71.0.44
+null
+
+2018-08-12 14:05:41 178.71.0.44
+null
+
+2018-08-12 14:06:06 178.71.0.44
+null
+
+2018-08-12 14:06:55 178.71.0.44
+null
+
+2018-08-12 14:09:04 178.71.0.44
+null
+
+2018-08-12 14:15:44 178.71.0.44
+null
+
+2018-08-12 14:17:27 178.71.0.44
+null
+
+2018-08-12 14:18:08 178.71.0.44
+null
+
+2018-08-12 14:19:01 178.71.0.44
+null
+
+2018-08-12 14:19:06 178.71.0.44
+null
+
+2018-08-12 14:19:33 178.71.0.44
+null
+
+2018-08-12 14:40:28 178.71.0.44
+null
+
+2018-08-12 14:40:34 178.71.0.44
+Uncaught exception waException:
+Заказ был совершен не Вами. Доступ запрещен. (501)
+## wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(212)
+#0 wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(167): shopFrontendCheckoutDigitalAction->getPurchasedProductLink('7')
+#1 wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(25): shopFrontendCheckoutDigitalAction->success()
+#2 wa-system/controller/waViewAction.class.php(170): shopFrontendCheckoutDigitalAction->execute()
+#3 wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#4 wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCheckoutDigitalAction))
+#5 wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#6 wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#7 wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#8 wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#9 wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'checkoutDigital')
+#10 wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#11 wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/checkout_d...')
+#12 index.php(7): waSystem->dispatch()
+#13 {main}
+
+2018-08-12 14:40:59 178.71.0.44
+Uncaught exception waException:
+Заказ был совершен не Вами. Доступ запрещен. (501)
+## wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(212)
+#0 wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(167): shopFrontendCheckoutDigitalAction->getPurchasedProductLink('7')
+#1 wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(25): shopFrontendCheckoutDigitalAction->success()
+#2 wa-system/controller/waViewAction.class.php(170): shopFrontendCheckoutDigitalAction->execute()
+#3 wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#4 wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCheckoutDigitalAction))
+#5 wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#6 wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#7 wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#8 wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#9 wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'checkoutDigital')
+#10 wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#11 wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/checkout_d...')
+#12 index.php(7): waSystem->dispatch()
+#13 {main}
+
+2018-08-12 15:02:34 178.71.0.44
+Uncaught exception customException:
+Заказ был совершен не Вами. Доступ запрещен. (501)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(167): shopFrontendCheckoutDigitalAction->getPurchasedProductLink('7')
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(25): shopFrontendCheckoutDigitalAction->success()
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(170): shopFrontendCheckoutDigitalAction->execute()
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCheckoutDigitalAction))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'checkoutDigital')
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/checkout_d...')
+#12 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#13 {main}
+
+2018-08-12 15:04:04 178.71.0.44
+Uncaught exception customException:
+Заказ был совершен не Вами. Доступ запрещен. (502)
+#0 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(167): shopFrontendCheckoutDigitalAction->getPurchasedProductLink('7')
+#1 /var/www/www-root/data/www/ftf.metateg.pro/wa-apps/shop/lib/actions/frontend/shopFrontendCheckoutDigital.action.php(25): shopFrontendCheckoutDigitalAction->success()
+#2 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewAction.class.php(170): shopFrontendCheckoutDigitalAction->execute()
+#3 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#4 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCheckoutDigitalAction))
+#5 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#6 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#7 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(229): waViewController->run(NULL)
+#8 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(164): waFrontController->runController(Object(waDefaultViewController), NULL)
+#9 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'checkoutDigital')
+#10 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(740): waFrontController->dispatch()
+#11 /var/www/www-root/data/www/ftf.metateg.pro/wa-system/waSystem.class.php(487): waSystem->dispatchFrontend('shop/checkout_d...')
+#12 /var/www/www-root/data/www/ftf.metateg.pro/index.php(7): waSystem->dispatch()
+#13 {main}
+
+2018-08-12 15:19:18 178.71.0.44
+null
+
+2018-08-12 15:19:37 178.71.0.44
+null
+
+2018-08-12 15:21:44 178.71.0.44
+null
+
+2018-08-12 15:21:48 178.71.0.44
+null
+
+2018-08-12 15:21:51 178.71.0.44
+null
+
+2018-08-12 15:22:32 178.71.0.44
+null
+
+2018-08-12 15:26:00 178.71.0.44
+createOrder() Digital
+
+2018-08-12 15:26:00 178.71.0.44
+{"payment":1}
+
+2018-08-12 15:26:00 178.71.0.44
+"    \u041e\u043f\u043b\u0430\u0442\u0438\u0442\u0435 \u0432\u0430\u0448\u0438\u043c \u043a\u043e\u0448\u0435\u043b\u044c\u043a\u043e\u043c \u0432 \u00ab\u042f\u043d\u0434\u0435\u043a\u0441.\u0414\u0435\u043d\u044c\u0433\u0430\u0445\u00bb:<br>\n    <iframe frameborder=\"0\" allowtransparency=\"true\" scrolling=\"no\"\n        src=\"https:\/\/money.yandex.ru\/embed\/small.xml?account=410015206738711&quickpay=small&yamoney-payment-type=on&button-text=01&button-size=l&button-color=orange&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%20%2310032&default-sum=123&successURL=http%3A%2F%2Fftf.metateg.pro%2Fshop%2Fcheckout%2Fsuccess%2F%3Forder_id%3D32&label=shop_410015206738711_32\"\n        width=\"228\" height=\"54\">\n\n    <\/iframe><br>\n    \u0438\u043b\u0438 \u0431\u0430\u043d\u043a\u043e\u0432\u0441\u043a\u043e\u0439 \u043a\u0430\u0440\u0442\u043e\u0439:<br>\n\n    <iframe frameborder=\"0\" allowtransparency=\"true\" scrolling=\"no\"\n            src=\"https:\/\/money.yandex.ru\/embed\/small.xml?account=410015206738711&quickpay=small&any-card-payment-type=on&button-text=01&button-size=l&button-color=orange&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%20%2310032&default-sum=123&successURL=http%3A%2F%2Fftf.metateg.pro%2Fshop%2Fcheckout%2Fsuccess%2F%3Forder_id%3D32&label=shop_410015206738711_32\"\n            width=\"228\" height=\"54\">\n\n    <\/iframe>\n"
+
+2018-08-12 15:26:10 178.71.0.44
+null
+
+2018-08-12 15:26:34 178.71.0.44
+null
+
+2018-08-12 19:18:00 178.71.0.44
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/protected/shop/products/52/00/52/files/6.pdf
+
+2018-08-12 19:20:23 178.71.0.44
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/protected/shop/products/52/00/52/files/7.pdf
+
+2018-08-15 14:04:55 178.67.178.181
+15
+
+2018-08-15 14:06:15 178.67.178.181
+
+
+2018-08-15 14:06:39 178.67.178.181
+{"id":"49","product_id":"28","upload_datetime":"2018-08-15 14:04:55","edit_datetime":null,"description":null,"sort":"2","width":"0","height":"0","size":"2152","filename":"Pervaya_vyshivka_1_1-15","original_filename":"doska-il22.csv","ext":"csv","badge_type":null,"badge_code":null}
+
+2018-08-15 14:08:48 178.67.178.181
+14
+
+2018-08-15 14:09:43 178.67.178.181
+6
+
+2018-08-15 17:55:42 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/products/28/00/28/files/Pervaya_vyshivka_1_1.pdf
+
+2018-08-15 17:55:42 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/shop/products/52/00/52/files/Opyat_tovar.pdf
+
+2018-08-15 18:27:17 178.67.178.181
+{}
+
+2018-08-15 18:27:17 178.67.178.181
+{}
+
+2018-08-15 18:46:15 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts
+
+2018-08-15 18:46:23 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts
+
+2018-08-15 18:46:23 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts
+
+2018-08-15 19:17:48 178.67.178.181
+zip error
+
+2018-08-15 19:17:48 178.67.178.181
+zip error
+
+2018-08-15 19:18:29 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b745255a8307/Первая вышивка 1 1 1 rtuh riuvh iruvh iurghvi uiubgi bvrugybv uybgvu  ybrg vybg yvb.zip
+
+2018-08-15 19:18:29 178.67.178.181
+zip error
+
+2018-08-15 19:18:29 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b745255a9dbf/Опять товар.zip
+
+2018-08-15 19:18:29 178.67.178.181
+zip error
+
+2018-08-15 19:19:55 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7452ab52986/Array.zip
+
+2018-08-15 19:19:55 178.67.178.181
+zip error
+
+2018-08-15 19:19:55 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7452ab539b1/Array.zip
+
+2018-08-15 19:19:55 178.67.178.181
+zip error
+
+2018-08-15 19:20:18 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7452c2965d9/Pervaya_vyshivka_1_1.zip
+
+2018-08-15 19:20:18 178.67.178.181
+zip error
+
+2018-08-15 19:20:18 178.67.178.181
+/var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7452c29767d/Opyat_tovar.zip
+
+2018-08-15 19:20:18 178.67.178.181
+zip error
+
+2018-08-15 19:22:49 178.67.178.181
+11
+
+2018-08-15 19:22:49 178.67.178.181
+zip error
+
+2018-08-15 19:22:49 178.67.178.181
+11
+
+2018-08-15 19:22:49 178.67.178.181
+zip error
+
+2018-08-15 19:23:18 178.67.178.181
+11
+
+2018-08-15 19:23:18 178.67.178.181
+11
+
+2018-08-15 19:24:41 178.67.178.181
+1
+
+2018-08-15 19:24:41 178.67.178.181
+1
+
+2018-08-15 19:40:35 178.67.178.181
+1
+
+2018-08-15 19:40:35 178.67.178.181
+1
+
+2018-08-16 10:24:37 92.101.243.193
+Error creating zip-file, filename: /var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7526b5c824d/Pervaya_vyshivka_1_1.zip, error code: 11
+
+2018-08-16 10:24:37 92.101.243.193
+Error creating zip-file, filename: /var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b7526b5d3674/Opyat_tovar.zip, error code: 11
+
+2018-08-16 14:14:00 92.101.243.193
+/wa-data/public/contacts
+
+2018-08-16 14:14:01 92.101.243.193
+/wa-data/public/contacts
+
+2018-08-16 14:15:56 92.101.243.193
+/wa-data/public/contacts/Pervaya_vyshivka_1_1.zip
+
+2018-08-16 14:15:57 92.101.243.193
+/wa-data/public/contacts/Opyat_tovar.zip
+
+2018-08-16 14:16:44 92.101.243.193
+/wa-data/public/contacts/files/5b755d1c8264b/Pervaya_vyshivka_1_1.zip
+
+2018-08-16 14:16:45 92.101.243.193
+/wa-data/public/contacts/files/5b755d1c86cc0/Opyat_tovar.zip
+
+2018-08-16 14:42:39 92.101.243.193
+Error creating zip-file, filename: /var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b75632faebe3/Pervaya_vyshivka_1_1.zip, error code: 11
+
+2018-08-16 14:44:13 92.101.243.193
+Error creating zip-file, filename: /var/www/www-root/data/www/ftf.metateg.pro/wa-data/public/contacts/files/5b75638d150c1/Pervaya_vyshivka_1_1.zip, error code: 11
+
+2018-08-16 15:43:02 92.101.243.193
+createOrder() Digital
+
+2018-08-16 15:43:02 92.101.243.193
+{"payment":1}
+
+2018-08-16 15:46:59 92.101.243.193
+createOrder() Digital
+
+2018-08-16 15:46:59 92.101.243.193
+{"payment":1}
+
+2018-08-16 17:11:32 92.101.243.193
+createOrder() Digital
+
+2018-08-16 17:11:32 92.101.243.193
+{"payment":1}
+
+2018-08-16 17:13:51 92.101.243.193
+createOrder() Digital
+
+2018-08-16 17:13:51 92.101.243.193
+{"payment":1}
+
+2018-08-16 17:16:46 92.101.243.193
+createOrder() Digital
+
+2018-08-16 17:16:46 92.101.243.193
+{"payment":1}
+
+2018-08-16 18:36:28 92.101.243.193
+createOrder() Digital
+
+2018-08-16 18:36:28 92.101.243.193
+{"payment":1}
+
+2018-08-16 18:40:53 92.101.243.193
+createOrder() Digital
+
+2018-08-16 18:40:53 92.101.243.193
+{"payment":1}
+
+2018-08-16 18:45:07 92.101.243.193
+createOrder() Digital
+
+2018-08-16 18:45:07 92.101.243.193
+{"payment":1}
+
+2018-08-16 19:17:25 92.101.243.193
+createOrder() Digital
+
+2018-08-16 19:17:25 92.101.243.193
+{"payment":1}
+
+2018-08-16 19:17:34 92.101.243.193
+{}
+
+2018-08-16 20:10:29 92.101.243.193
+{}
+
+2018-08-16 20:10:31 92.101.243.193
+{}
+
+2018-08-16 20:11:30 92.101.243.193
+createOrder() Digital
+
+2018-08-16 20:11:30 92.101.243.193
+{"payment":1}
+
+2018-08-16 20:18:19 92.101.243.193
+createOrder() Digital
+
+2018-08-16 20:18:19 92.101.243.193
+{"payment":1}
+
+2018-08-16 20:18:36 92.101.243.193
+{}
+
+2018-08-16 20:18:38 92.101.243.193
+{}
+
+2018-08-16 20:21:42 92.101.243.193
+createOrder() Digital
+
+2018-08-16 20:21:42 92.101.243.193
+{"payment":1}
+
+2018-08-16 20:21:42 92.101.243.193
+{"contact":{},"contact_cart_code":"03698d763472d08275b0f779b3ba6c59","items":{"85":{"code":"03698d763472d08275b0f779b3ba6c59","contact_id":null,"product_id":"28","sku_id":"28","create_datetime":"2018-08-16 20:21:24","quantity":"1","type":"product","service_id":null,"service_variant_id":null,"product":{"id":"28","name":"\u041f\u0435\u0440\u0432\u0430\u044f \u0432\u044b\u0448\u0438\u0432\u043a\u0430 1 1 1 rtuh riuvh iruvh iurghvi uiubgi bvrugybv uybgvu  ybrg vybg yvb","summary":"","meta_title":"","meta_keywords":"","meta_description":"","description":"","contact_id":"1","create_datetime":"2018-07-20 14:19:59","edit_datetime":"2018-08-16 18:42:02","status":"1","type_id":"1","image_id":"28","image_filename":"","video_url":null,"sku_id":"28","ext":"jpg","url":"pervaya-vyshivka-1-1-1","rating":"0.00","price":"998","compare_price":"150","currency":"RUB","min_price":"998","max_price":"998","tax_id":"0","count":"20","cross_selling":null,"upselling":null,"rating_count":"0","total_sales":"0.0000","category_id":"6","badge":null,"sku_type":"0","base_price_selectable":"0.0000","compare_price_selectable":"0.0000","purchase_price_selectable":"0.0000","sku_count":"1","original_price":"998.0000","original_compare_price":"150.0000","unconverted_currency":"RUB","unconverted_price":"998.0000","frontend_price":"998","unconverted_min_price":"998.0000","frontend_min_price":"998","unconverted_max_price":"998.0000","frontend_max_price":"998","unconverted_compare_price":"150.0000","frontend_compare_price":"150"},"sku_code":"1","purchase_price":"100.0000","compare_price":"150","sku_name":"","currency":"RUB","price":"998","name":"\u041f\u0435\u0440\u0432\u0430\u044f \u0432\u044b\u0448\u0438\u0432\u043a\u0430 1 1 1 rtuh riuvh iruvh iurghvi uiubgi bvrugybv uybgvu  ybrg vybg yvb","sku_file_name":""}},"total":998,"params":[]}
+
+2018-08-16 20:21:56 92.101.243.193
+{}
+
+2018-08-16 20:24:52 92.101.243.193
+createOrder() Digital
+
+2018-08-16 20:24:52 92.101.243.193
+{"payment":1}
+
+2018-08-16 20:24:52 92.101.243.193
+{"contact":{},"contact_cart_code":"03698d763472d08275b0f779b3ba6c59","items":{"86":{"code":"03698d763472d08275b0f779b3ba6c59","contact_id":null,"product_id":"28","sku_id":"28","create_datetime":"2018-08-16 20:24:34","quantity":"2","type":"product","service_id":null,"service_variant_id":null,"product":{"id":"28","name":"\u041f\u0435\u0440\u0432\u0430\u044f \u0432\u044b\u0448\u0438\u0432\u043a\u0430 1 1 1 rtuh riuvh iruvh iurghvi uiubgi bvrugybv uybgvu  ybrg vybg yvb","summary":"","meta_title":"","meta_keywords":"","meta_description":"","description":"","contact_id":"1","create_datetime":"2018-07-20 14:19:59","edit_datetime":"2018-08-16 18:42:02","status":"1","type_id":"1","image_id":"28","image_filename":"","video_url":null,"sku_id":"28","ext":"jpg","url":"pervaya-vyshivka-1-1-1","rating":"0.00","price":"998","compare_price":"150","currency":"RUB","min_price":"998","max_price":"998","tax_id":"0","count":"20","cross_selling":null,"upselling":null,"rating_count":"0","total_sales":"0.0000","category_id":"6","badge":null,"sku_type":"0","base_price_selectable":"0.0000","compare_price_selectable":"0.0000","purchase_price_selectable":"0.0000","sku_count":"1","original_price":"998.0000","original_compare_price":"150.0000","unconverted_currency":"RUB","unconverted_price":"998.0000","frontend_price":"998","unconverted_min_price":"998.0000","frontend_min_price":"998","unconverted_max_price":"998.0000","frontend_max_price":"998","unconverted_compare_price":"150.0000","frontend_compare_price":"150"},"sku_code":"1","purchase_price":"100.0000","compare_price":"150","sku_name":"","currency":"RUB","price":"998","name":"\u041f\u0435\u0440\u0432\u0430\u044f \u0432\u044b\u0448\u0438\u0432\u043a\u0430 1 1 1 rtuh riuvh iruvh iurghvi uiubgi bvrugybv uybgvu  ybrg vybg yvb","sku_file_name":""}},"total":1996,"params":[]}
+
+2018-08-17 11:40:12 95.55.175.201
+{"original":true,"id":"create","name":"\u0421\u043e\u0437\u0434\u0430\u0442\u044c"}
+
+2018-08-17 12:04:39 95.55.175.201
+{"original":true,"id":"create","name":"\u0421\u043e\u0437\u0434\u0430\u0442\u044c"}
+
+2018-08-17 12:10:13 95.55.175.201
+{"original":true,"id":"create","name":"\u0421\u043e\u0437\u0434\u0430\u0442\u044c"}
+
+2018-08-17 12:11:56 95.55.175.201
+{"original":true,"id":"create","name":"\u0421\u043e\u0437\u0434\u0430\u0442\u044c"}
+
+2018-08-17 12:31:51 95.55.175.201
+03698d763472d08275b0f779b3ba6c59
+
+2018-08-17 12:33:50 95.55.175.201
+createOrder() Digital
+
+2018-08-17 12:33:50 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:29:30 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:29:30 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:29:36 95.55.175.201
+"191b69da238e0fecb8e4ea872fa8f5bb"
+
+2018-08-17 13:29:38 95.55.175.201
+"191b69da238e0fecb8e4ea872fa8f5bb"
+
+2018-08-17 13:30:33 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:30:33 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:30:43 95.55.175.201
+{}
+
+2018-08-17 13:31:42 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:31:42 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:31:50 95.55.175.201
+{}
+
+2018-08-17 13:34:23 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:34:23 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:34:29 95.55.175.201
+{}
+
+2018-08-17 13:35:35 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:35:35 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:35:42 95.55.175.201
+"aa843b5b070d54acc425ecbc57e78c53"
+
+2018-08-17 13:41:52 95.55.175.201
+createOrder() Digital
+
+2018-08-17 13:41:52 95.55.175.201
+{"payment":1}
+
+2018-08-17 13:42:19 95.55.175.201
+"191b69da238e0fecb8e4ea872fa8f5bb"
+
+2018-08-17 13:42:21 95.55.175.201
+"191b69da238e0fecb8e4ea872fa8f5bb"
+
+2018-08-17 15:31:41 95.55.175.201
+createOrder() Digital
+
+2018-08-17 15:31:41 95.55.175.201
+{"payment":1}
+
+2018-08-17 16:11:56 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:13:18 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:15:19 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/error/
+
+2018-08-17 16:20:19 95.55.175.201
+http://ftf.metateg.pro/shop/my/
+
+2018-08-17 16:20:42 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/error/
+
+2018-08-17 16:21:06 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:25:14 95.55.175.201
+123?order_id=60
+
+2018-08-17 16:27:53 95.55.175.201
+/
+
+2018-08-17 16:27:53 95.55.175.201
+/
+
+2018-08-17 16:27:53 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:29:49 95.55.175.201
+
+
+2018-08-17 16:29:49 95.55.175.201
+
+
+2018-08-17 16:29:49 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:34:42 95.55.175.201
+"waRequest"
+
+2018-08-17 16:34:42 95.55.175.201
+"waRequest"
+
+2018-08-17 16:34:42 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:35:30 95.55.175.201
+{"PATH":"\/usr\/local\/sbin:\/usr\/local\/bin:\/usr\/sbin:\/usr\/bin","SCRIPT_NAME":"\/index.php","REQUEST_URI":"\/shop\/checkout_digital\/success\/","QUERY_STRING":"","REQUEST_METHOD":"GET","SERVER_PROTOCOL":"HTTP\/1.0","GATEWAY_INTERFACE":"CGI\/1.1","REDIRECT_URL":"\/shop\/checkout_digital\/success\/","REMOTE_PORT":"57908","SCRIPT_FILENAME":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro\/index.php","SERVER_ADMIN":"webmaster@ftf.metateg.pro","CONTEXT_DOCUMENT_ROOT":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro","CONTEXT_PREFIX":"","REQUEST_SCHEME":"http","DOCUMENT_ROOT":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro","REMOTE_ADDR":"95.55.175.201","SERVER_PORT":"80","SERVER_ADDR":"127.0.0.1","SERVER_NAME":"ftf.metateg.pro","SERVER_SOFTWARE":"Apache\/2.4.6 (CentOS) OpenSSL\/1.0.2k-fips mod_fcgid\/2.3.9 PHP\/5.4.16","SERVER_SIGNATURE":"","HTTP_COOKIE":"landing=%2Fshop%2Fpervaya-vyshivka-1-1-1%2F; PHPSESSID=fhi6pg4h08q8m6b3b2unbjf5s2; shop_cart=191b69da238e0fecb8e4ea872fa8f5bb; auth_token=dcbd4c072026728198af2372a34f5b7; remember=1; _csrf=5b76b699e6a0b7.31679301; back_url=%2Fwebasyst%2Flogs%2F%3Faction%3Dfiles%26mode%3Dupdatetime; last_page=1%5E%5E%5E%2Fwebasyst%2Flogs%2F%3Faction%3Dfile%26path%3Derror.log","HTTP_ACCEPT_LANGUAGE":"en-US,en;q=0.9,ru;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_REFERER":"http:\/\/ftf.metateg.pro\/shop\/checkout_digital\/","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,image\/apng,*\/*;q=0.8","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/67.0.3396.99 Safari\/537.36","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_CACHE_CONTROL":"max-age=0","HTTP_CONNECTION":"close","HTTP_X_FORWARDED_PORT":"80","HTTP_X_FORWARDED_PROTO":"http","HTTP_HOST":"ftf.metateg.pro","PERL5LIB":"\/usr\/share\/awstats\/lib:\/usr\/share\/awstats\/plugins","UNIQUE_ID":"W3bPIsfhY@Zyxa1sfBDNPQAAAAc","REDIRECT_STATUS":"200","REDIRECT_PERL5LIB":"\/usr\/share\/awstats\/lib:\/usr\/share\/awstats\/plugins","REDIRECT_UNIQUE_ID":"W3bPIsfhY@Zyxa1sfBDNPQAAAAc","FCGI_ROLE":"RESPONDER","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1534512930.6398,"REQUEST_TIME":1534512930}
+
+2018-08-17 16:35:30 95.55.175.201
+{"PATH":"\/usr\/local\/sbin:\/usr\/local\/bin:\/usr\/sbin:\/usr\/bin","SCRIPT_NAME":"\/index.php","REQUEST_URI":"\/shop\/checkout_digital\/success\/","QUERY_STRING":"","REQUEST_METHOD":"GET","SERVER_PROTOCOL":"HTTP\/1.0","GATEWAY_INTERFACE":"CGI\/1.1","REDIRECT_URL":"\/shop\/checkout_digital\/success\/","REMOTE_PORT":"57908","SCRIPT_FILENAME":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro\/index.php","SERVER_ADMIN":"webmaster@ftf.metateg.pro","CONTEXT_DOCUMENT_ROOT":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro","CONTEXT_PREFIX":"","REQUEST_SCHEME":"http","DOCUMENT_ROOT":"\/var\/www\/www-root\/data\/www\/ftf.metateg.pro","REMOTE_ADDR":"95.55.175.201","SERVER_PORT":"80","SERVER_ADDR":"127.0.0.1","SERVER_NAME":"ftf.metateg.pro","SERVER_SOFTWARE":"Apache\/2.4.6 (CentOS) OpenSSL\/1.0.2k-fips mod_fcgid\/2.3.9 PHP\/5.4.16","SERVER_SIGNATURE":"","HTTP_COOKIE":"landing=%2Fshop%2Fpervaya-vyshivka-1-1-1%2F; PHPSESSID=fhi6pg4h08q8m6b3b2unbjf5s2; shop_cart=191b69da238e0fecb8e4ea872fa8f5bb; auth_token=dcbd4c072026728198af2372a34f5b7; remember=1; _csrf=5b76b699e6a0b7.31679301; back_url=%2Fwebasyst%2Flogs%2F%3Faction%3Dfiles%26mode%3Dupdatetime; last_page=1%5E%5E%5E%2Fwebasyst%2Flogs%2F%3Faction%3Dfile%26path%3Derror.log","HTTP_ACCEPT_LANGUAGE":"en-US,en;q=0.9,ru;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_REFERER":"http:\/\/ftf.metateg.pro\/shop\/checkout_digital\/","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,image\/apng,*\/*;q=0.8","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/67.0.3396.99 Safari\/537.36","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_CACHE_CONTROL":"max-age=0","HTTP_CONNECTION":"close","HTTP_X_FORWARDED_PORT":"80","HTTP_X_FORWARDED_PROTO":"http","HTTP_HOST":"ftf.metateg.pro","PERL5LIB":"\/usr\/share\/awstats\/lib:\/usr\/share\/awstats\/plugins","UNIQUE_ID":"W3bPIsfhY@Zyxa1sfBDNPQAAAAc","REDIRECT_STATUS":"200","REDIRECT_PERL5LIB":"\/usr\/share\/awstats\/lib:\/usr\/share\/awstats\/plugins","REDIRECT_UNIQUE_ID":"W3bPIsfhY@Zyxa1sfBDNPQAAAAc","FCGI_ROLE":"RESPONDER","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1534512930.6398,"REQUEST_TIME":1534512930}
+
+2018-08-17 16:35:30 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:36:31 95.55.175.201
+/shop/checkout_digital/success/
+
+2018-08-17 16:36:31 95.55.175.201
+/shop/checkout_digital/success/
+
+2018-08-17 16:36:31 95.55.175.201
+http://ftf.metateg.pro/shop/checkout/success/?order_id=60
+
+2018-08-17 16:40:01 95.55.175.201
+http://ftf.metateg.pro/shop/checkout_digital/success/?order_id=60
+
+2018-08-26 15:14:13 95.55.58.221
+createOrder()
+
+2018-08-26 15:14:13 95.55.58.221
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"}}
+
+2018-08-26 15:25:29 95.55.58.221
+createOrder()
+
+2018-08-26 15:25:29 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"0":{"payment":1}}
+
+2018-08-26 15:29:00 95.55.58.221
+createOrder()
+
+2018-08-26 15:29:00 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 15:41:55 95.55.58.221
+createOrder()
+
+2018-08-26 15:41:55 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 15:45:11 95.55.58.221
+createOrder()
+
+2018-08-26 15:45:11 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 15:57:50 95.55.58.221
+createOrder()
+
+2018-08-26 15:57:50 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:40:19 95.55.58.221
+createOrder()
+
+2018-08-26 16:40:19 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:44:59 95.55.58.221
+createOrder()
+
+2018-08-26 16:44:59 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:47:34 95.55.58.221
+createOrder()
+
+2018-08-26 16:47:34 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:49:27 95.55.58.221
+createOrder()
+
+2018-08-26 16:49:27 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:50:43 95.55.58.221
+createOrder()
+
+2018-08-26 16:50:43 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:52:36 95.55.58.221
+createOrder()
+
+2018-08-26 16:52:36 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:53:31 95.55.58.221
+createOrder()
+
+2018-08-26 16:53:31 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:55:30 95.55.58.221
+createOrder()
+
+2018-08-26 16:55:30 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 16:56:30 95.55.58.221
+createOrder()
+
+2018-08-26 16:56:30 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 17:43:38 95.55.58.221
+createOrder()
+
+2018-08-26 17:43:38 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 17:44:56 95.55.58.221
+createOrder()
+
+2018-08-26 17:44:56 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 17:46:26 95.55.58.221
+createOrder()
+
+2018-08-26 17:46:26 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 17:49:00 95.55.58.221
+createOrder()
+
+2018-08-26 17:49:00 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 17:50:53 95.55.58.221
+createOrder()
+
+2018-08-26 17:50:53 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 18:23:44 95.55.58.221
+createOrder()
+
+2018-08-26 18:23:44 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 18:25:10 95.55.58.221
+createOrder()
+
+2018-08-26 18:25:10 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 18:26:40 95.55.58.221
+createOrder()
+
+2018-08-26 18:26:40 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 18:34:47 95.55.58.221
+createOrder()
+
+2018-08-26 18:34:47 95.55.58.221
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-26 19:07:46 95.55.58.221
+createOrder()
+
+2018-08-26 19:07:46 95.55.58.221
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 15:51:34 94.142.23.189
+createOrder()
+
+2018-08-28 15:51:34 94.142.23.189
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"comment":"123","payment":1}
+
+2018-08-28 16:05:03 94.142.23.189
+createOrder()
+
+2018-08-28 16:05:03 94.142.23.189
+{"contact":{},"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-28 17:34:56 94.142.23.189
+createOrder()
+
+2018-08-28 17:34:56 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"comment":"123","payment":1}
+
+2018-08-28 17:38:27 94.142.23.189
+createOrder()
+
+2018-08-28 17:38:27 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 18:41:40 94.142.23.189
+createOrder()
+
+2018-08-28 18:41:40 94.142.23.189
+{"contact":{},"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-28 19:10:30 94.142.23.189
+createOrder()
+
+2018-08-28 19:10:30 94.142.23.189
+{"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-28 20:25:21 94.142.23.189
+createOrder()
+
+2018-08-28 20:25:21 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 20:34:21 94.142.23.189
+createOrder()
+
+2018-08-28 20:34:21 94.142.23.189
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 20:35:30 94.142.23.189
+createOrder()
+
+2018-08-28 20:35:30 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 20:36:56 94.142.23.189
+createOrder()
+
+2018-08-28 20:36:56 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-28 20:44:00 94.142.23.189
+createOrder()
+
+2018-08-28 20:44:00 94.142.23.189
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 14:14:36 95.55.32.64
+createOrder()
+
+2018-08-29 14:14:36 95.55.32.64
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 14:16:55 95.55.32.64
+createOrder()
+
+2018-08-29 14:16:55 95.55.32.64
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 14:18:16 95.55.32.64
+createOrder()
+
+2018-08-29 14:18:16 95.55.32.64
+{"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-29 14:18:42 95.55.32.64
+createOrder()
+
+2018-08-29 14:18:42 95.55.32.64
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 14:20:50 95.55.32.64
+createOrder()
+
+2018-08-29 14:20:50 95.55.32.64
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"comment":"7777","payment":1}
+
+2018-08-29 14:24:01 95.55.32.64
+createOrder()
+
+2018-08-29 14:24:01 95.55.32.64
+{"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-29 14:27:11 95.55.32.64
+createOrder()
+
+2018-08-29 14:27:11 95.55.32.64
+{"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 16:38:58 95.55.32.64
+createOrder()
+
+2018-08-29 16:38:58 95.55.32.64
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-29 19:26:23 95.55.32.64
+createOrder()
+
+2018-08-29 19:26:23 95.55.32.64
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-30 18:36:50 178.70.57.248
+createOrder()
+
+2018-08-30 18:36:50 178.70.57.248
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-30 19:24:51 178.70.57.248
+createOrder()
+
+2018-08-30 19:24:51 178.70.57.248
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-31 16:09:14 178.71.190.131
+createOrder()
+
+2018-08-31 16:09:14 178.71.190.131
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-08-31 16:31:29 178.71.190.131
+createOrder() Digital
+
+2018-08-31 16:31:29 178.71.190.131
+{}
+
+2018-08-31 16:56:49 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:09:22 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:12:30 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:14:43 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:15:32 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:52:16 178.71.190.131
+createOrder() Digital
+
+2018-08-31 17:54:11 178.71.190.131
+createOrder() Digital
+
+2018-08-31 18:02:54 178.71.190.131
+createOrder() Digital
+
+2018-08-31 18:04:02 178.71.190.131
+createOrder()
+
+2018-08-31 18:04:02 178.71.190.131
+{"contact":{},"shipping":{"id":5,"rate_id":"delivery","name":"\u041a\u0443\u0440\u044c\u0435\u0440","plugin":"courier"},"payment":1}
+
+2018-08-31 18:46:37 178.71.190.131
+{"payment":1}
+
+2018-08-31 18:47:33 178.71.190.131
+{"contact":{},"payment":1}
+
+2018-08-31 18:52:29 178.71.190.131
+{"contact":{},"shipping":{"id":4,"rate_id":"parcel","name":"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438 (\u041f\u043e\u0441\u044b\u043b\u043a\u0430)","plugin":"russianpost"},"payment":1}
+
+2018-09-03 17:46:13 94.142.22.239
+Error 0: Invalid server response with code 500 while request http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[logs]=0.9.4.0&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&v[wa-plugins/payment/yandexmoney]=1.3.6.29&v[wa-plugins/shipping/courier]=1.2.6.21&v[wa-plugins/shipping/russianpost]=1.5.1.39&v[wa-plugins/shipping/yandexdelivery]=1.1.4.31&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjcuMiJ9&locale=ru_RU
+	(cUrl used)
+
+2018-09-03 17:47:13 94.142.22.239
+Error 0: Invalid server response with code 500 while request http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[logs]=0.9.4.0&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&v[wa-plugins/payment/yandexmoney]=1.3.6.29&v[wa-plugins/shipping/courier]=1.2.6.21&v[wa-plugins/shipping/russianpost]=1.5.1.39&v[wa-plugins/shipping/yandexdelivery]=1.1.4.31&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjcuMiJ9&locale=ru_RU
+	(cUrl used)
+
+2018-09-03 17:48:14 94.142.22.239
+Error 0: Invalid server response with code 500 while request http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[logs]=0.9.4.0&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&v[wa-plugins/payment/yandexmoney]=1.3.6.29&v[wa-plugins/shipping/courier]=1.2.6.21&v[wa-plugins/shipping/russianpost]=1.5.1.39&v[wa-plugins/shipping/yandexdelivery]=1.1.4.31&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjcuMiJ9&locale=ru_RU
+	(cUrl used)
+
+2018-09-03 17:49:15 94.142.22.239
+Error 0: Invalid server response with code 500 while request http://www.webasyst.com/download/2.0/updates/?v[contacts]=1.1.6.20&v[installer]=1.8.8.236&v[logs]=0.9.4.0&v[shop]=7.4.5.243&v[shop/plugins/migrate]=2.1.1.3&v[shop/plugins/redirect]=1.1.42447&v[shop/widgets/customers]=1.0.42413&v[shop/widgets/kpi]=1.1.0.2&v[shop/widgets/products]=1.0.42413&v[shop/widgets/sources]=1.0.42413&v[site]=2.3.3.75&v[team]=1.0.6.86&v[wa-widgets/clock]=1.1.42413&v[wa-widgets/news]=1.3.0.2&v[wa-widgets/weather]=1.2.42839&v[wa-plugins/payment/yandexmoney]=1.3.6.29&v[wa-plugins/shipping/courier]=1.2.6.21&v[wa-plugins/shipping/russianpost]=1.5.1.39&v[wa-plugins/shipping/yandexdelivery]=1.1.4.31&server_data=1&hash=a97db9dd2cbb7d2dcabf34e3bdf38dc2&domain=ZnRmLm1ldGF0ZWcucHJv&signature=eyJwaHAiOiI1LjQuMTYiLCJjIjo4LCJhcGkiOiJjZ2ktZmNnaSIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTA0MnN0YWIxMjcuMiJ9&locale=ru_RU
+	(cUrl used)

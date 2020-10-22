@@ -1,0 +1,18 @@
+{function translateCurrency}
+    {$currency_translates = ["EUR" => "евро", "RUB" => "руб.", "USD" => "дол."]}
+    {$currency_translates[$currency]}
+{/function}
+
+<link rel="stylesheet" href="{$wa_theme_url}css/slick-slider.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/product.css">
+
+{* $product.type.id - тип товара. 1 - ПО, 2 - подарки и сувениры *}
+{$template = $product.features["shablon_stranitsy_produkta"]}
+{if $template == "Маленький"}
+    {$template_file = "product_small.html"}
+{else}
+    {$template_file = "product_big.html"}
+{/if}
+{include file="`$wa_active_theme_path`/$template_file" inline}
+
+<script type="text/javascript" src="{$wa_theme_url}js/product.js"></script>

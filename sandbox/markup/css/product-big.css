@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08.07.2018, 20:06:32
+    Author     : x
+*/
+
+.product .showcase{
+    padding-top: 80px;
+}
+
+.product_title {
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(135, 198, 190, 1.0);
+    width: 500px;
+    position: absolute;
+    top: 22px;
+    margin-left: -80px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+    margin-top: -103px;
+    margin-left: 0;
+    height: 500px;
+}
+
+.product .images_slider{
+    padding-top: 100px;
+}
+
+.product_description{
+    color: #050505;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: -80px;
+    width: 72%;
+}
+
+.product_price{
+    margin-top: 30px;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #4C1B1B;
+    margin-left: -80px;
+}
+
+#add_to_cart{
+    margin-left: -80px;
+    margin-top: 30px;
+    position: absolute;
+}
+
+.product_full_description{
+    color: #4C1B1B;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-size: 14px;
+    line-height: 29px;
+    margin-left: -80px;
+    margin-top: 80px;
+    width: 72%;
+    margin-top: 137px;
+    float: left;
+}
+
+.cross_links{
+    width: 400px;
+    position: absolute;
+    right: 30px;
+    margin-top: 145px;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+}
+
+.cross_links > .title{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 20px 9px;
+}
+
+.cross_links .showcase{
+    padding: 0;
+}
+
+.cross_links .showcase > div{
+    float: left;
+    position: relative;
+    min-height: 241px;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+}
+
+.cross_links  .showcase > .title{
+    width: 100%;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(76, 27, 27, 1.0);
+    background: white;
+    min-height: 57px;
+    padding-left: 5px;
+}
+
+.cross_links  .showcase > .single{
+    width: 50%;
+    padding: 10px;
+}
+
+ .cross_links .showcase > .double{
+    width: 66%;
+    padding: 10px;
+}
+
+.cross_links  .showcase > .single > div:first-child,
+.cross_links  .showcase > .double > div:first-child{
+    height: 172px;
+    background-color: grey;
+}
+
+.cross_links  .showcase > .single > div:last-child,
+.cross_links  .showcase > .double > div:last-child{
+    height: 60px;
+}
+
+.cross_links  .showcase .title{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 0 0 0;
+}
+
+.cross_links  .showcase .price{
+    font-size: 12px;
+    padding: 5px 0 0 0;
+}
+
+.product > .social_panel {
+    width: 20%;
+    padding-top: 300px;
+    padding-left: 20px;
+    clear: both;
+    position: absolute;
+    margin-left: 0;
+}

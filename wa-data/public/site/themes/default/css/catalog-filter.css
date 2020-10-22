@@ -1,0 +1,62 @@
+.catalog .filter{
+    z-index: 999;
+}
+
+.catalog .filter > .wrapper{
+    width: 50px;
+    height: 50px;
+    float: right;
+    border: 1px solid #87c6be;
+    border-radius: 2px;
+    font-family: "Montserrat";
+    overflow: hidden;
+}
+
+button.open{
+    height: 50px;
+    width: 50px;
+    left: 0;
+    position: absolute;
+    background-color: rgba(207, 230, 227, 1.0);
+    background-image: url(../img/umbrella.png);
+    background-size: 53%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+button.open.filter_closed{
+    border-bottom: 1px solid rgb(135, 198, 190);
+    border-right: 1px solid rgb(135, 198, 190);
+    border-left: 1px solid rgb(135, 198, 190);
+    border-radius: 2px;
+    left: 0px;
+}
+
+.catalog .filter .title{
+    width: 157px;
+    height: 50px;
+    float: left;
+    color: #9fd1cb;
+    padding: 17px 15px;
+}
+
+.catalog .filter .controls{
+    clear: both;
+    padding: 15px;
+}
+
+.custom-select{
+    width: 177px;
+    margin-bottom: 10px;
+}
+
+.filter div#tematics{
+    margin-top: 30px;
+} 
+
+.product_list .empty{
+    padding-left: 7px;
+}

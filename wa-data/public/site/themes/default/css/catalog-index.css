@@ -1,0 +1,234 @@
+.catalog {
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    background-color: white;
+    margin-top: 136px;
+    padding-top: 77px;
+    margin-bottom: -10px;
+    width: 100%;
+}
+
+.catalog > div{
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.catalog > .social_panel{
+    width: 20%;
+    padding-top: 300px;
+    padding-left: 20px;
+    clear: both;
+    position: absolute;
+}
+
+.catalog > .text, .catalog > .slider{
+    width: 37%;
+}
+
+.catalog > .text span:first-child{
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 0;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48.0px;
+    color: rgba(76, 27, 27, 1.0);
+    text-align: left;
+    line-height: 56.0px;
+}
+
+.catalog > .text span:last-child{
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 0;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14.0px;
+    color: rgba(76, 27, 27, 1.0);
+    text-align: left;
+    line-height: 29.0px;
+}
+
+.catalog > .social_panel a{
+    background-color: rgba(255, 255, 255, 0.0);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0.38;
+    background-size: cover;
+    display: block;
+    height: 17px;
+}
+
+.catalog > .social_panel a.facebook{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 77px;
+    background-position: 77px;
+    margin-bottom: 83px;
+}
+
+.catalog > .social_panel a.twitter{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 77px;
+    background-position: 0px;
+}
+
+.catalog > .social_panel a.instagram{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 79px;
+    background-position: -91px;
+    margin-bottom: 76px;
+}
+
+.catalog > .title{
+    width: 129px;
+    height: 43px;
+    margin-top: 73px;
+    margin-bottom: 138px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(135, 198, 190, 1.0);
+    text-align: left;
+    line-height: 42.0px;
+}
+
+.catalog .filter{
+    width: 50px;
+    padding-top: 33px;
+}
+
+.catalog .categories{
+    width: 20%;
+    padding-left: 88px;
+    padding-top: 27px;
+}
+
+.catalog .categories > ul {
+    list-style-type: none;
+}
+
+.catalog .categories > ul > li{
+    padding: 10px 0;
+}
+
+.catalog .categories > ul > li > a{
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12.0px;
+    color: rgba(5, 5, 5, 1.0);
+    text-align: left;
+    letter-spacing: 0.92px;
+    line-height: 20.0px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.catalog .categories > ul > li > a.active{
+    color: rgba(80, 127, 122, 1.0);
+}
+
+.catalog .showcase{
+    padding: 0 28px;
+    width: 66%;
+    margin-top: 26px;
+    padding-bottom: 35px;
+}
+
+.catalog .showcase > .product_list > div{
+    float: left;
+    position: relative;
+    min-height: 310px;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+}
+
+.catalog  .showcase > .title{
+    width: 100%;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(76, 27, 27, 1.0);
+    background: white;
+    min-height: 57px;
+    padding-left: 5px;
+}
+
+.catalog  .showcase .single{
+    width: 186px;
+    padding: 10px;
+}
+
+ .catalog .showcase .double{
+    width: 393px;
+    padding: 10px;
+}
+
+.catalog  .showcase .single > div:first-child,
+.catalog  .showcase .double > div:first-child{
+    height: 250px;
+    overflow: hidden;
+}
+
+.catalog  .showcase img{
+    height: 100%;
+}
+
+.catalog  .showcase .single > div:last-child,
+.catalog  .showcase .double > div:last-child{
+    height: 60px;
+}
+
+.catalog  .showcase a.product_link{
+    text-decoration: none;
+    color: black;
+}
+
+.catalog  .showcase .catalog_product_title{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 0 0 0;
+    max-height: 48px;
+    overflow: hidden;  
+}
+
+.catalog  .showcase .product_price{
+    font-size: 12px;
+    padding: 5px 0 0 0;
+}
+
+a#load_more{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    margin-left: 10px;
+}
+
+footer .buttontop {
+    background-color: rgb(0,0,0);
+    background-image: url("../images/logo/catalog-arrownexticon 1@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    height: 60px;
+    width: 60px;
+    float: right;
+    transform: rotate(-90deg);
+    margin-right: 50px;
+    margin-bottom: -37px;
+}
+
+.load_more_wrapper{
+    width: 100%;
+    min-height: 0 !important;
+    margin-top: 20px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Почта России: Форма №116</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body, table { font-family: 'Helvetica', Arial, sans-serif; font-size: 13px; }
+body { padding: 10px; }
+input { font-size: 13px; margin-top: 2px; }
+table td { padding-right: 20px; }
+#img-link {
+    width:auto;
+    outline: none;
+    padding:0;
+    display:inline;
+}
+.hint { color: #aaa; font-size: 0.8em; }
+img {
+    border-width:0;
+    padding: 0;
+    margin: 0;
+}
+#load_div {
+    background: url('{$wa_url}wa-content/img/loading16.gif') no-repeat;
+    height:16px;
+    padding-left: 20px;
+    padding-top: 0;
+}
+@media print
+{
+    body { padding: 0; margin: 0; }
+    .noprint
+    {
+        display:none;
+    }
+}
+</style>
+<script type="text/javascript">{literal}
+<!--
+
+function load(){
+    var image_node;
+    if(image_node = document.getElementById('image')){
+        image_node.style.display = '';
+        image_node.parentNode.style.display = 'block';
+    }
+    var load_node;
+    if(load_node = document.getElementById('load_div')){
+        load_node.style.display = 'none';
+    }
+}
+//-->{/literal}
+</script>
+</head>
+<body>
+{if $editable}
+<form id="edit_front_form" action="" method="post">
+{$wa->csrf()}
+<table>
+    <tr><td colspan="2"><h2>Форма №116 <span class="hint">Сопроводительный адрес к посылке</span></h2></td></tr>
+
+    <tr>
+        <td>Сумма объявленной ценности (цифрами)</td>
+        <td><input type="text" name="order_price_d"
+            value="{$order.total|wa_format_amount:$order.currency}" /></td>
+    </tr>
+    <tr>
+        <td>Сумма наложенного платежа (цифрами)</td>
+        <td><input type="text" name="order_amount_d"
+            value="{$order.total|wa_format_amount:$order.currency}" /></td>
+    </tr>
+
+    <tr>
+        <td colspan="2"><strong><br/><br/>Получатель заказа:</strong></td>
+    </tr>
+
+    <tr>
+        <td>ФИО</td>
+        <td><input size="80" type="text" name="shipping_name"
+            value="{$order.contact_name|escape:'html'}" /></td>
+    </tr>
+    <tr>
+        <td>Адрес</td>
+        <td><input size="80" type="text" name="shipping_address"
+            value="{$address|escape:'html'}" /></td>
+    </tr>
+    <tr>
+        <td>Почтовый индекс</td>
+        <td><input type="text" name="shipping_zip"
+            value="{$order.shipping_address.zip|escape:'html'}" /></td>
+    </tr>
+
+    <tr>
+        <td colspan="2"><strong><br/><br/>Отправитель (магазин):</strong></td>
+    </tr>
+
+    <tr>
+        <td>Документ</td>
+        <td><input type="text" name="document" value="{$settings.document|default:''|escape}" placeholder="паспорт"></td>
+    </tr>
+    <tr>
+        <td>Серия документа</td>
+        <td><input type="text" name="document_series" value="{$settings.document_series|default:''|escape}"></td>
+    </tr>
+    <tr>
+        <td>Номер документа</td>
+        <td><input type="text" name="document_number" value="{$settings.document_number|default:''|escape}"></td>
+    </tr>
+    <tr>
+        <td>Дата выдачи документа</td>
+        <td>
+            <input type="text" name="document_issued_day" value="{$settings.document_issued_day|escape}" placeholder="дд" size="2">
+            /
+            <input type="text" name="document_issued_month" value="{$settings.document_issued_month|escape}" placeholder="мм" size="2">
+            /
+            <input type="text" name="document_issued_year" value="{$settings.document_issued_year|escape}" placeholder="гг" size="2">
+        </td>
+    </tr>
+    <tr>
+        <td>Кем выдан документ</td>
+        <td><input type="text" name="document_issued" value="{$settings.document_issued|escape}"></td>
+    </tr>
+    <tr>
+        <td colspan="2">Эти данные также можно отредактировать в настройках плагина Почта России.</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><br><input type="submit" value="Сформировать бланк формы №116" /></td>
+    </tr>
+</table>
+</form>
+{else}
+{if !waRequest::get('mass_print')}
+<form action="" class="noprint">
+    <input id="print_button" type="button" src="{$wa_url}wa-plugins/shipping/russianpost/img/printer-icon.gif" value="Печать" onclick="window.print();return false;"/>
+</form>
+{/if}
+
+
+<div id="load_div" class="noprint">Формирование бланка...</div>
+<p>
+<a href="?{$src_front}" target="_blank" title="" style="display:none;border:0" >
+<img width="100%" id="image" src="?{$src_front}" alt=""    title="" onload="load();" />
+</a>
+</p>
+{/if}
+</body>
+</html>

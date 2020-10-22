@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20.07.2018, 16:58:32
+    Author     : x
+*/
+
+.header_abs{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+
+header .top_line{
+    background: transparent;
+}
+
+header .burger{
+    background-color: transparent;
+}
+
+.firstscreencopy .asset2{
+    background-image: url(../images/logo-fintiflushka.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.categories_grid{
+    margin-top: -118px;
+}
+
+.categories_grid a{
+    text-decoration: none;
+}
+
+.categories_grid > .big_square{
+    width: 33.33%;
+    height: 500px;
+    float: left;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: 150% -79%;
+}
+
+.categories_grid > .big_square > .bar{
+    width: 100%;
+    height: 250px;
+    float: left;
+}
+
+.categories_grid > .big_square > .small_square{
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+.fill_lightgray{
+    background-color: #c5dbdd;
+}
+
+.fill_gainsboro{
+    background-color: #cfe6e3;
+}
+
+.fill_lightsteelblue{
+    background-color: #aec9cb;
+}
+
+.fill_lavender{
+    background-color: #e0f1ef;
+}
+
+.big_square > .text{
+    padding: 74% 0 0 30px;
+}
+
+.big_square > .text > .title{
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 41.0px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.big_square > .text > .title > sup{
+    font-size: 27px;
+    margin-left: 5px;
+}
+
+.big_square > .text > .description{
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-style: normal;
+    font-size: 17.0px;
+    color: rgba(76, 27, 27, 1.0);
+}
+
+.bar > .text.upper{
+    padding: 8% 0 0 30px;
+}
+
+.bar > .text.lower{
+    padding: 33% 0 0 30px;
+}
+
+.bar > .text > .title, .categories_grid > .double_square > .title{
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 41.0px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.bar > .text > .title > sup{
+    font-size: 27px;
+    margin-left: 5px;
+}
+
+.categories_grid > .double_square{
+    width: 66.66%;
+    height: 500px;
+    float: left;
+    padding: 3%;
+}
+
+.categories_grid > .double_square > .title{
+    height: 128px;
+    line-height: 128px;
+    border: 1px black solid;
+    text-align: center;
+}
+
+.categories_grid > .double_square > table{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.categories_grid > .double_square > table td{
+    text-align: center;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-style: normal;
+    font-size: 17.0px;
+    padding: 8px 0;
+}
+
+#designs a{
+    color: rgb(5, 5, 5);
+}
+
+.big_square a, .bar a{
+    color: black;
+}

@@ -1,0 +1,326 @@
+<div class="shadowed">
+    <div class="i-white-core-content">
+
+        {if !empty($messages)}
+            {foreach $messages as $message}
+                <div class="block double-padded i-message-{$message.result}">
+                    {if $message.result == 'success'}
+                        <i class="icon16 yes"></i>
+                    {elseif $message.result == 'fail'}
+                        <i class="icon16 no"></i>
+                    {/if}
+                    {$message.text|escape|nl2br}
+                </div>
+            {/foreach}
+        {/if}
+
+        <div class="block double-padded">
+
+            <div class="fields form">
+
+                <form action="?module=settings" enctype="multipart/form-data" method="POST">
+                    {$wa->csrf()}
+                    <div class="field-group">
+                        <div class="field">
+                            <div class="name">
+                                <label for="config-name">[`Company name`]</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="large" name="name" value="{$settings.name|escape}" id="config-name">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">
+                                <label for="config-url">[`Website address`]</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" name="url" value="{$settings.url|escape}" id="config-url"><br>
+                            </div>
+                        </div>
+
+                        {if $locales}
+                            <div class="field">
+                                <div class="name">
+                                    <label for="config-locale">[`Default Webasyst interface language`]</label>
+                                </div>
+                                <div class="value no-shift">
+                                    <select name="locale" id="config-locale">
+                                        {foreach $locales as $locale => $locale_name}
+                                            <option value="{$locale|escape}"{if $settings.locale == $locale} selected="selected"{/if}>{$locale_name|escape}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        {/if}
+
+                        <div class="field">
+                            <div class="name">
+                                <label for="config-email">[`Email`]</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" name="email" value="{$settings.email|escape}" id="config-email" placeholder="your@email"><br>
+                                <span class="hint">[`Main account administrative email where system notification will be sent.`]</span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="name">
+                                <label for="config-sender">[`Sender`]</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" name="sender" value="{$settings.sender|escape}" id="config-sender" placeholder="noreply@email"><br>
+                                <span class="hint">[`Reply-To address for system email notifications sent by Webasyst.`]</span>
+
+                                <div class="js-dkim-wrapper">
+                                </div>
+                            </div>
+                        </div>
+
+                        {* DKIM *}
+                        <div class="field c-dkim-settings js-dkim-wrapper">
+                            <div class="name">
+                                <label for="is-dkim">DKIM</label>
+                            </div>
+                            <div class="value">
+                                <label>
+                                    <input type="checkbox" name="sender_dkim" id="is-dkim" class="js-dkim-checkbox" value="1"{if ifset($sender.dkim) == 1} checked{/if}{if !$ssl_is_set || !$php_version_ok} disabled{/if} />
+                                </label>
+                                <div class="hint js-dkim-error"></div>
+                                <div class="hint">[`Add a DKIM signature to outgoing email messages to confirm your ownership of the sender’s email address.`]</div>
+                                <div class="hint bold js-dkim-needs-email" style="margin-right: 50px;{if mb_strlen($settings.sender) != 0} display: none;{/if}">[`Enter an email address in “Sender” field to use DKIM.`]</div>
+                                <input type="hidden" name="sender_dkim_pvt_key" class="js-sender-dkim-pvt-key" value="{ifset($sender.dkim_pvt_key)|escape}" />
+                                <input type="hidden" name="sender_dkim_pub_key" class="js-sender-dkim-pub-key" value="{ifset($sender.dkim_pub_key)|escape}" />
+                                <input type="hidden" name="sender_dkim_selector" class="js-sender-dkim-selector" value="{ifset($sender.dkim_selector)|escape}" />
+                                {if !$ssl_is_set}
+                                    [`You need to install openssl php extention to use DKIM`]
+                                {/if}
+                                {if !$php_version_ok}
+                                    [`You need PHP version 5.3 or higher to use DKIM. Your current version is:`] <b>{$php_version}</b>
+                                {/if}
+                            </div>
+
+                            {* DKIM INFO *}
+                            <div class="value">
+                                <div class="js-dkim-info"{if !isset($sender.dkim)} style="display:none;"{/if}>
+                                    <div class="field">
+                                        <p>
+                                            [`Add a new <b>TXT record</b> with this public DKIM key to the DNS zone of domain name`]
+                                            <span id="sender-domain-0" style="font-weight: bold;    ">{ifset($sender.domain)|escape}</span>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Host `]</div>
+                                        <div class="value">
+                                            <code>
+                                                {strip}
+                                                    <span id="sender-dkim-selector">
+                                                        {ifempty($sender.dkim_selector, 'key1')|escape}
+                                                    </span>
+                                                    ._domainkey
+                                                {/strip}
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Domain`]</div>
+                                        <div class="value"><span id="sender-domain">{ifset($sender.domain)|escape}</span></div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Record type`]</div>
+                                        <div class="value">
+                                            <code>TXT</code>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Value`]</div>
+                                        <div class="value" style="word-wrap:break-word; width:500px;">
+                                            <code>
+                                                v=DKIM1; k=rsa; t=s; p=<span id="one-string-key">{ifset($sender.one_string_key)}</span>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+
+                        <div class="field">
+                            <div class="name">
+                                [`User authentication`]
+                            </div>
+                            <div class="value no-shift">
+                                <input type="checkbox" name="rememberme" id="rememberme-auth-login" value="1" {if $settings.rememberme}checked="checked"{/if}>
+                                <label for="rememberme-auth-login">[`Allow "Remember me" option in Webasyst authorization form`]</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="name">
+                                [`Authorization form background image`]
+                            </div>
+                            <div class="value">
+
+                            </div>
+                            <div class="value">
+                                <ul class="i-image-select">
+                                    {foreach $backgrounds as $b}
+                                        <li{if $settings.auth_form_background == "stock:`$b`"} class="selected"{/if} title="{$b|escape}"><a href="#" data-value="stock:{$b|escape}"><img
+                                                        src="{$wa_url}wa-content/img/backgrounds/thumbs/{$b}" alt="{$b}"></a></li>
+                                    {/foreach}
+                                    {foreach $images as $i}
+                                        <li {if $settings.auth_form_background == $i} class="selected"{/if} title="{$i|escape}"><a href="#" data-value="{$i|escape}"><img
+                                                        src="{$images_url}/{$i}?t={filemtime("`$images_path`/`$i`")}" alt="{$i}"></a></li>
+                                    {/foreach}
+                                </ul>
+                                <input type="hidden" name="auth_form_background_thumb" value="">
+                            </div>
+                            <div class="value">
+                                <input type="file" name="auth_form_background"><br>
+                                {if $settings.auth_form_background}
+                                    {if isset($image) && $image}
+                                        <img src="{$wa_url}wa-data/public/webasyst/{$image.file_name}?t={$image.file_mtime}" style="max-width: 500px;"
+                                             alt="{$image.file_name|escape}">
+                                        <br>
+                                        <span class="hint">{$image.width}&times;{$image.height}, {$image.file_size|wa_format_file_size:'%0.0f':'[`B,KB,MB`]'}</span>
+                                        <a class="small" href="?module=settings&amp;action=remove&amp;setting[]=auth_form_background&amp;setting[]=auth_form_background_stretch"
+                                           onClick="return confirm(this.title);" title="[`Delete authorization form background image?`]">[`Delete`]</a>
+                                    {elseif $image === null}
+                                        <span class="hint">[`File not found`] {$settings.auth_form_background|escape}</span>
+                                    {/if}
+                                {/if}
+                            </div>
+                            {if $settings.auth_form_background}
+                                <div class="value" {if empty($image)} style="display: none;" {/if}>
+                                    <input type="checkbox" value="1" name="auth_form_background_stretch" id="installer-auth-stretch-background"
+                                           {if $settings.auth_form_background_stretch}checked="checked"{/if}> <label for="installer-auth-stretch-background">[`Stretch to fill
+                                        entire screen`]</label>
+                                </div>
+                            {/if}
+                        </div>
+                    </div>
+
+                    {if !empty($locale_adapter)}
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="name">[`Localization`]</div>
+                                <div class="value no-shift">
+                                    <select name="locale_adapter">
+                                        <option {if $locale_adapter == 'gettext'}selected{/if} value="gettext">[`Gettext (recommended)`]</option>
+                                        <option {if $locale_adapter == 'php'}selected{/if} value="php">PHP</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+
+
+                    {if !empty($map_adapters)}
+                        <div class="field">
+                            <div class="name">[s`Maps`]</div>
+                            {foreach $map_adapters as $a}
+                                {$adapter_id = $a->getId() }
+                                <div class="value no-shift">
+                                    <label>
+                                        <input type="radio" name="map_adapter" {if $settings.map_adapter==$adapter_id}checked{/if} value="{$adapter_id}"> {$a->getName()}
+                                    </label>
+                                </div>
+                                {$map_adapter_settings = $a->getSettingsHtml(['namespace'=>'map_settings'])}
+                                {if !empty($map_adapter_settings)}
+                                    <div class="value no-shift js-map-adapter-settings" data-adapter-id="{$adapter_id}" style="display: none;">
+                                        {$map_adapter_settings}
+                                    </div>
+                                {/if}
+                            {/foreach}
+                            <br><br>
+                        </div>
+                    {/if}
+
+                    <div class="field s-captcha">
+                        <div class="name">[`Captcha`]</div>
+                        <div class="value no-shift">
+                            <label>
+                                <input type="radio" name="captcha" {if ifset($captcha) == 'waPHPCaptcha' || empty($captcha)}checked{/if} value="waPHPCaptcha"> [`Webasyst Captcha`]
+                            </label>
+                        </div>
+                        <div class="value no-shift">
+                            <label>
+                                <input type="radio" name="captcha" {if ifset($captcha) == 'waReCaptcha'}checked{/if} value="waReCaptcha"> [`Google reCAPTCHA`]
+                                
+                                <div{if ifset($captcha) != 'waReCaptcha'} style="display: none"{/if} class="js-captcha-adapter-settings">
+                                    <div class="field">
+                                        <div class="name">[`Site Key`]</div>
+                                        <div class="value">
+                                            <input type="text" name="captcha_options[sitekey]" value="{ifset($captcha_options.sitekey)}">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Secret`]</div>
+                                        <div class="value">
+                                            <input type="text" name="captcha_options[secret]" value="{ifset($captcha_options.secret)}"><br>
+                                            <span class="hint"><a href="https://www.google.com/recaptcha" target="_blank">[`Get site key and secret for your website`]</a> <i class="icon16 new-window"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">
+                                            <label for="invisible">[`Invisible mode`]</label>
+                                        </div>
+                                        <div class="value no-shift">
+                                            <label>
+                                                <input id="invisible" type="checkbox" name="captcha_options[invisible]" value="true" {if ifset($captcha_options.invisible)}checked{/if}>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label><br>
+                            <p class="hint">[`Selected captcha type will be used throughout your storefront wherever applicable.`]</p>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <div class="name">
+                                [`Developer`]
+                            </div>
+                            <div class="value no-shift">
+                                <input type="checkbox" name="config[debug]" value="1" {if isset($config.debug) && $config.debug}checked="checked" {/if}id="config-debug-checkbox">
+                                <label for="config-debug-checkbox">[`Developer mode`]<br/><span class="hint">[`Recommended while development`]</span></label>
+                            </div>
+                            <div class="value">
+                                <input type="button" name="clear_cache" value="[`Clear cache`]">
+                                <span id="installer-cache-state" style="display: none;"><!-- state placeholder --></span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">
+                                [`Webasyst version`]
+                            </div>
+                            <div class="value no-shift">{$version}</div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <div class="value submit">
+                                <input type="submit" class="button green" value="[`Save`]">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<script src="{$wa_app_static_url}js/settings.js?v={$wa->version()}" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.installer_settings.init();
+    });
+</script>

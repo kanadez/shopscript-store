@@ -1,0 +1,112 @@
+<div data-step-id="shipping">
+{$external_methods = []}
+{foreach $checkout_shipping_methods as $m}
+    <div class="form-group top-margin">
+        <label class="container_radio">{$m.name|escape}
+            <input 
+                type="radio" 
+                name="shipping_id" 
+                value="{$m.id}" 
+                class="delivery_type" 
+                {if $m.external || !empty($m.error)}disabled{/if} {if $m.id == $shipping.id}checked{/if}                
+            />
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    {if empty($m.error)}
+    <div class="form-group">
+        <div class="advanced_rates">
+            {if empty($m.error) && !empty($m.rates)}
+                {if count($m.rates) > 1}
+                    <select class="shipping-rates" name="rate_id[{$m.id}]">
+                        {foreach $m.rates as $rate_id => $r}
+                            <option data-rate="{shop_currency($r.rate, $r.currency)}" {if !empty($r.est_delivery)}data-est_delivery="{$r.est_delivery}"{/if} {if !empty($r.comment)}data-comment="{$r.comment}"{/if} value="{$rate_id}"{if $rate_id == $shipping.rate_id} selected{/if}>{$r.name} ({shop_currency($r.rate, $r.currency)})</option>
+                        {/foreach}
+                    </select>
+                {else}
+                    <input type="hidden" name="rate_id[{$m.id}]" value="{key($m.rates)}">
+                {/if}
+            {/if}
+        </div>
+        <div class="rate">
+            {if $m.rate !== null}
+            {shop_currency_html($m.rate, $m.currency)}
+            {elseif $m.external}
+            {$external_methods[] = $m.id}
+            [`Loading...`] <i class="icon16 loading"></i>
+            {/if}
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="description">
+            [`Estimated delivery`]: {if !empty($m.est_delivery)}{$m.est_delivery}{/if}
+            {if $m.description}<p>{$m.description}</p>{/if}
+            {if !empty($m.form)}
+            <div 
+                id="address_form_{$m.id}" 
+                data-shipping-id="{$m.id}" 
+                {if $m.id != $shipping.id}style="display:none"{/if} 
+                class="form-group bottom-margin address_form {if $m.id == $shipping.id}current{/if}"
+            >
+                <div class="change_address_form static">
+                    <label>[`Ваш адрес:`]</label>
+                    <div class="address_value"></div>
+                    <button onclick="order.editShippingAddress({$m.id}); return false;">[`Изменить`]</button>
+                </div>
+            </div>
+            <div 
+                id="change_address_form_{$m.id}" 
+                class="form-group bottom-margin"
+            >
+                <div class="change_address_form editable narrow" data-shipping-id="{$m.id}">
+                {$m.form->html()}
+                {if !empty($checkout_steps.shipping.service_agreement_hint)}                    
+                    {$checkout_steps.shipping.service_agreement_hint}                        
+                {/if}
+                </div>
+            </div>
+            {else}
+            <div class="form-group bottom-margin">
+                <div class="change_address_form">
+                    <label>[`Ваш адрес:`]</label>
+                    <div class="address_value">{$checkout_shipping_options["address"]["city"]}, {$checkout_shipping_options["address"]["street"]}</div>
+                    <button onclick="order.editCheckoutData(); return false;">[`Изменить`]</button>
+                </div>
+            </div>
+            {/if}
+            {if !empty($m.custom_html)}
+                <div class="clear-both"></div>
+                <div class="wa-form" {if $m.id != $shipping.id}style="display:none"{/if}>{$m.custom_html}</div>
+            {/if}
+        </div>
+    </div>
+    {else}
+    <div class="form-group">
+        <div class="description">{$m.error}</div>
+    </div>
+    {/if}
+{foreachelse}
+    <div class="form-group">
+        <div class="description">[`Oops! We are sorry, but <strong>we cannot ship this order to your selected destination</strong>. Checkout cannot be completed.`]</div>
+    </div>
+{/foreach}
+</div>
+<input type="hidden" name="step" value="shipping">
+{$authorized_user_back_action = "order.backToCart(); return false;"}
+{$new_user_back_action = "order.editCheckoutData(); return false;"}
+<button 
+    class="button_solid shipping back" 
+    onclick="{if $wa->user()->isAuth()} {$authorized_user_back_action} {else} {$new_user_back_action} {/if}">
+    [`Назад`]
+</button>
+<input type="submit" class="button_solid" value="[`Далее`]" />
+<div id="shipping_loader" class="outer_loader order_process_loader"></div>
+<span id="shipping_not_selected_error" class="submit_error">[`Please select shipping option`]</span>
+
+<!-- plugin hook: 'frontend_checkout' -->
+{* @event frontend_checkout.%plugin_id% *}
+{foreach $frontend_checkout as $_}{$_}{/foreach}
+
+{if !empty($error)}
+<div class="checkout-result error">{$error}</div>
+{/if}

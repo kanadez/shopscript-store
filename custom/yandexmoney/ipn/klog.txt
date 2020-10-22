@@ -1,0 +1,20 @@
+: ########################################
+time: 09/17/2018 07:18:31 pm
+sha1: b201aa70258367dafcce66d82e059679884bca2d
+: ########################################
+time: 09/17/2018 07:18:50 pm
+notification_type: p2p-incoming
+amount: 717.12
+datetime: 2018-09-17T16:18:50Z
+codepro: false
+sender: 41001000040
+sha1_hash: 220c517e0628f13e1cb438ac3b2eddf1c1afe6a1
+test_notification: true
+operation_label: 
+operation_id: test-notification
+currency: 643
+label: 
+sha1: 220c517e0628f13e1cb438ac3b2eddf1c1afe6a1
+sql query response: 1
+label part 1: 
+label part 2: 

@@ -1,0 +1,42 @@
+<!-- Подключение файлов стилей -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="{$wa_theme_url}plugins/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="{$wa_theme_url}plugins/slick/slick-theme.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/modal.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/styles.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/catalog.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/catalog-filter.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/owl.carousel.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/jquery.fancybox.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/ion.rangeSlider.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/animate.css">
+<link rel="stylesheet" href="{$wa_theme_url}css/anima.css">
+
+<link rel="stylesheet" type="text/css" href="{$wa_theme_url}plugins/grid/css/base.css" />
+<link rel="stylesheet" type="text/css" href="{$wa_theme_url}plugins/grid/css/demo1.css" />
+{literal}
+<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Ваш браузер сильно устарел и не поддерживает наш сайт. Пожалуйста, используйте более современный.");</script>
+{/literal}
+
+<!-- js -->
+<script src="{$wa_theme_url}js/jquery-3.1.1.min.js"></script>
+<script src="{$wa_theme_url}js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="{$wa_app_static_url}js/lazy.load.js?v{$wa->version()}"></script>
+{if $wa->shop->config('enable_2x')}
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-plugins/jquery.retina.min.js?v{$wa->version(true)}"></script>
+<!--<script type="text/javascript">$(window).load(function() {
+    $('.promo img').retina({ force_original_dimensions: false });
+    $('.product-list img,.product-info img,.cart img').retina();;
+    $('.bestsellers img').retina();
+});
+</script>-->
+{/if}
+
+{if !empty($nofollow)}
+    <!-- "nofollow" for pages not to be indexed, e.g. customer account -->
+    <meta name="robots" content="noindex,nofollow" />
+{/if}
+
+<!-- plugin hook: 'frontend_head' -->
+{* @event frontend_head.%plugin_id% *}
+{foreach $frontend_head as $_}{$_}{/foreach}

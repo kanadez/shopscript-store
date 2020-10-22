@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{$order.id_str|escape}</title>
+    {$wa->css()}
+    <script src="{$wa_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="{$wa_url}wa-plugins/shipping/courier/css/form.css">
+    <script>
+        function textAreaAdjust(textarea) {
+            var $textarea = $(textarea);
+            $textarea.css("min-height", 0);
+            var scroll_h = $textarea[0].scrollHeight;
+            $textarea.css("min-height", (scroll_h + 10) + "px");
+
+            var value = nl2br( escape($textarea.val()) );
+
+            if (value.length) {
+                $("#js-textarea-div").removeClass("hidden").html(value);
+            } else {
+                $("#js-textarea-div").addClass("hidden").html("");
+            }
+        }
+
+        function nl2br(string) {
+            return string.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        }
+
+        function escape(string) {
+            return $("<div />").text(string).html();
+        }
+    </script>
+</head>
+
+<body onLoad="textAreaAdjust(document.getElementById('comment'))">
+
+<div class="block double-padded">
+
+    <div class="c-layout fixed">
+        <div class="content c-column">
+
+            <!-- order id -->
+            <h1>{$order.id_str}</h1>
+
+            <div class="clear-left"></div>
+
+            <!-- order content -->
+            <ul class="menu-v order-content">
+                {foreach $order.items as $item}
+                    <li>
+                        {$item.name|escape}
+                        <span class="gray">{$item.sku|escape}</span>
+                        <span class="gray">&times;</span>
+                        <span class="large bold">{$item.quantity}</span>
+                    </li>
+                {/foreach}
+            </ul>
+
+            <section class="c-payment-section">
+
+                <h2>{$order.total|wa_format_amount:$order.currency:'%{s}'}</h2>
+
+                {if $order.paid_datetime}
+                    <div class="paid">{$p->_w('Paid')}</div>
+                {/if}
+
+                <p>
+                    {$p->_w('Payment')}: <strong class="inline_edit">{$order.payment_name|escape}</strong>
+                    {*
+                    {$p->_w('Shipping cost')}: <strong class="inline_edit">{$order.shipping|wa_format_amount:$order.currency:'%{s}'}</strong>
+                     *}
+                </p>
+            </section>
+
+        </div>
+        <div class="c-column c-sidebar-column">
+
+            <div class="c-print-button">
+                <input type="button" class="print-button" onclick="window.print();return false;" value="{$p->_w('Print')}">
+            </div>
+
+            <!-- shipping info -->
+            <h3>{$order.contact.name|escape}</h3>
+
+            {if $main_contact_info}
+                <ul class="menu-v with-icons compact contact-info">
+                    {foreach $main_contact_info as $top_field}
+                        <li><i class="icon16 {$top_field.id}"></i>{$top_field.value}</li>
+                    {/foreach}
+                </ul>
+            {/if}
+
+            <!-- address -->
+            <section class="c-address-section">
+                <h4 class="gray">{$p->_w('Shipping address')}</h4>
+                <p class="large bold address">{$shipping_address}</p>
+            </section>
+        </div>
+    </div>
+
+    <section class="c-comment-section">
+        <h4 class="c-label noprint gray">{$p->_w('Comment')}:</h4>
+        <textarea class="large" onkeyup="textAreaAdjust(this)" id="comment" title="{$p->_w('Comment')}">{$order.comment|escape}</textarea>
+        <div class="textarea {if empty($order.comment)}hidden{/if}" id="js-textarea-div">{$order.comment|escape}</div>
+    </section>
+
+    <section class="c-map-section">
+        <div class="c-map-wrapper">{$map}</div>
+    </section>
+
+</div>
+
+</body>
+</html>

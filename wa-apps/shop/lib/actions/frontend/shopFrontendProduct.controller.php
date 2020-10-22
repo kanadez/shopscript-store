@@ -1,0 +1,52 @@
+<?php
+
+class shopFrontendProductController extends waViewController
+{
+    public function execute()
+    {
+        if (waRequest::param('url_type') == 2) {
+
+            $product_model = new shopProductModel();
+
+            $category_url = waRequest::param('category_url');
+
+            if ($category_url) {
+                $category_model = new shopCategoryModel();
+                $c = $category_model->getByField('full_url', $category_url);
+                if ($c) {
+                    $product = $product_model->getByUrl(waRequest::param('product_url'), $c['id']);
+                    if ($product && $product['category_id'] != $c['id']) {
+
+                        $product = new shopProduct($product, true);
+                        $routing = wa()->getRouting();
+
+                        $storefront = preg_replace('@^https?://@', '', $routing->getUrl('shop/frontend', true));
+
+                        $url = $product->getProductUrl($storefront, true);
+                        if ($url) {
+                            $this->redirect($url, 301);
+                        }
+                    }
+                } else {
+                    $product = null;
+                }
+            } else {
+                $product = $product_model->getByField('url', waRequest::param('product_url'));
+            }
+
+            if (!$product) {
+                // try find page
+                $url = waRequest::param('category_url');
+                $url_parts = explode('/', $url);
+                waRequest::setParam('page_url', waRequest::param('product_url'));
+                waRequest::setParam('product_url', end($url_parts));
+                $this->executeAction(new shopFrontendProductPageAction());
+            } else {
+                $this->executeAction(new shopFrontendProductAction($product));
+            }
+
+        } else {
+            $this->executeAction(new shopFrontendProductAction());
+        }
+    }
+}

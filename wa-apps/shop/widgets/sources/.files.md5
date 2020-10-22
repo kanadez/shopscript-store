@@ -1,0 +1,13 @@
+598946377f998557bbfc5835d5454290 *img/sources.png
+a1751e1f10a3b96b05d0401c97e72008 *lib/.htaccess
+e17c7bff29c4a2a101dec335fa05b209 *lib/config/build.php
+65992d1beb85506b5d81cd7a491c9852 *lib/config/settings.php
+f18eb30013d03421943ab0ac5344bc5c *lib/config/widget.php
+2fedd48282476ead7ff44d1307a93298 *lib/shopSources.widget.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+d7fc5a20c83ff4ab60951f2eb77f3d5f *locale/en_US/LC_MESSAGES/shop_widget_sources.mo
+f17a4c674b0625caec09b5502448c349 *locale/en_US/LC_MESSAGES/shop_widget_sources.po
+c3aada5587e0cec8fbf0bd5ba9c37167 *locale/ru_RU/LC_MESSAGES/shop_widget_sources.mo
+620a198fcf1d2135db7c1d3d1dd1cbeb *locale/ru_RU/LC_MESSAGES/shop_widget_sources.po
+a1751e1f10a3b96b05d0401c97e72008 *templates/.htaccess
+c7a8017c7af1a2c932e985961a4ed9bb *templates/Default.html

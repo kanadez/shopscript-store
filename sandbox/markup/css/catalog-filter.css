@@ -1,0 +1,521 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.07.2018, 18:03:34
+    Author     : x
+*/
+
+* { box-sizing: border-box; }
+.specanimationblock-filter {
+  pointer-events: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.0);  width: 209px;  position: relative;  height: 412px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  float: right;
+}
+
+.specanimationblock-filter .blockfilter {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0px;  height: 412px;  width: 209px;  position: absolute;  margin: 0;  left: 0px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .base {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 1.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .iconiconfilter {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 0%;  top: 0%;  height: 12.14%;  width: 23.92%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .iconiconfilter .blocksecondmenu {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .iconiconfilter .blocksecondmenu .boxmoredetails {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .iconiconfilter .a5j {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 14px;  height: 22px;  width: 24px;  position: absolute;  margin: 0;  left: 13px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .iconiconfilter .a5j .a5j1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 2.27%;  height: 95.45%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .u0444u0438u043bu044cu0442u0440 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 2.67%;  height: calc(0.00% + 29px);  width: 32.54%;  position: absolute;  margin: 0;  left: 8.61%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 6.70%;  top: 33.25%;  height: 9.71%;  width: 85.17%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select .boxmoredetails1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select .line {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 8.99%;  bottom: 40.00%;  height: 15.00%;  width: 4.49%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select .line .line1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 16.67%;  height: 66.67%;  width: 87.50%;  position: absolute;  margin: 0;  left: 6.25%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select .image1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: calc(50.00% - 20px);  height: calc(0.00% + 40px);  width: 33.15%;  position: absolute;  margin: 0;  left: 8.43%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 6.70%;  bottom: 43.93%;  height: 9.71%;  width: 85.17%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select1 .boxmoredetails2 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select1 .line2 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 8.99%;  bottom: 40.00%;  height: 15.00%;  width: 4.49%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select1 .line2 .line3 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 16.67%;  height: 66.67%;  width: 87.50%;  position: absolute;  margin: 0;  left: 6.25%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select1 .image2 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: calc(50.00% - 20px);  height: calc(0.00% + 40px);  width: 33.71%;  position: absolute;  margin: 0;  left: 8.43%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select2 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 6.70%;  bottom: 30.83%;  height: 9.71%;  width: 85.17%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select2 .boxmoredetails3 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select2 .line4 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 8.99%;  bottom: 40.00%;  height: 15.00%;  width: 4.49%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select2 .line4 .line5 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 16.67%;  height: 66.67%;  width: 87.50%;  position: absolute;  margin: 0;  left: 6.25%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select2 .image3 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: calc(50.00% - 20px);  height: calc(0.00% + 40px);  width: 30.90%;  position: absolute;  margin: 0;  left: 8.43%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select3 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 6.70%;  bottom: 17.72%;  height: 9.71%;  width: 85.17%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select3 .boxmoredetails4 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select3 .line6 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 8.99%;  bottom: 40.00%;  height: 15.00%;  width: 4.49%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select3 .line6 .line7 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 16.67%;  height: 66.67%;  width: 87.50%;  position: absolute;  margin: 0;  left: 6.25%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select3 .image4 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: calc(50.00% - 20px);  height: calc(0.00% + 40px);  width: 17.42%;  position: absolute;  margin: 0;  left: 8.43%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select4 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 6.70%;  bottom: 4.61%;  height: 9.71%;  width: 85.17%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select4 .boxmoredetails5 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(135, 198, 190, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select4 .line8 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  right: 8.99%;  bottom: 40.00%;  height: 15.00%;  width: 4.49%;  position: absolute;  margin: 0;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select4 .line8 .line9 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 16.67%;  height: 66.67%;  width: 87.50%;  position: absolute;  margin: 0;  left: 6.25%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .select4 .image5 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: calc(50.00% - 20px);  height: calc(0.00% + 40px);  width: 26.40%;  position: absolute;  margin: 0;  left: 8.43%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .checkboxup {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 14.08%;  height: 3.88%;  width: 6.70%;  position: absolute;  margin: 0;  left: 8.61%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .checkboxup .rectangle {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  bottom: 0%;  height: 62.50%;  width: 71.43%;  position: absolute;  margin: 0;  left: 7.14%;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(150, 150, 150, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .checkboxup .combinedshape {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 15.62%;  height: 68.75%;  width: 64.29%;  position: absolute;  margin: 0;  left: 17.86%;  -ms-transform: rotate(40deg); /* IE 9 */
+  -webkit-transform: rotate(40deg); /* Chrome, Safari, Opera */
+  transform: rotate(40deg);
+}
+
+.specanimationblock-filter .blockfilter .image6 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 18.93%;  height: calc(0.00% + 40px);  width: 56.94%;  position: absolute;  margin: 0;  left: 18.18%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .u0413u043eu0442u043eu0432u044bu0435u0440u0430u0431u043eu0442u044b {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 11.89%;  height: calc(0.00% + 40px);  width: 47.37%;  position: absolute;  margin: 0;  left: 18.18%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .checkbox {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 22.57%;  height: 2.43%;  width: 4.78%;  position: absolute;  margin: 0;  left: 9.09%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .blockfilter .checkbox .rectangle1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(150, 150, 150, 1.0);  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .iconiconfilter1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0px;  height: 50px;  width: 50px;  position: absolute;  margin: 0;  left: 159px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .iconiconfilter1 .blocksecondmenu1 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .iconiconfilter1 .blocksecondmenu1 .boxmoredetails6 {
+  pointer-events: none;
+  background-color: rgba(207, 230, 227, 1.0);  top: 0%;  height: 100%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  border-radius: 2px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .iconiconfilter1 .a5j2 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 14px;  height: 22px;  width: 24px;  position: absolute;  margin: 0;  left: 13px;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.specanimationblock-filter .iconiconfilter1 .a5j2 .a5j3 {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.0);  top: 2.27%;  height: 95.45%;  width: 100%;  position: absolute;  margin: 0;  left: 0%;  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+
+.transition-specanimationblock-filter0-0-0.specanimationblock-filter .blockfilter {
+  animation: transition-specanimationblock-filter0-0-0 0.2s ease-in-out 0s 1 forwards;
+  -o-animation: transition-specanimationblock-filter0-0-0 0.2s ease-in-out 0s 1 forwards;
+  -moz-animation: transition-specanimationblock-filter0-0-0 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: transition-specanimationblock-filter0-0-0 0.2s ease-in-out 0s 1 forwards;
+}
+@keyframes transition-specanimationblock-filter0-0-0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes transition-specanimationblock-filter0-0-0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes transition-specanimationblock-filter0-0-0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes transition-specanimationblock-filter0-0-0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+
+.transition-specanimationblock-filter0-1-0.specanimationblock-filter .iconiconfilter1 .a5j2 .a5j3 {
+  animation: transition-specanimationblock-filter0-1-0 0.2s ease-in-out 0s 1 forwards;
+  -o-animation: transition-specanimationblock-filter0-1-0 0.2s ease-in-out 0s 1 forwards;
+  -moz-animation: transition-specanimationblock-filter0-1-0 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: transition-specanimationblock-filter0-1-0 0.2s ease-in-out 0s 1 forwards;
+}
+@keyframes transition-specanimationblock-filter0-1-0 {
+  to {
+  
+  }
+}
+@-o-keyframes transition-specanimationblock-filter0-1-0 {
+  to {
+  
+  }
+}
+@-moz-keyframes transition-specanimationblock-filter0-1-0 {
+  to {
+  
+  }
+}
+@-webkit-keyframes transition-specanimationblock-filter0-1-0 {
+  to {
+  
+  }
+}
+
+
+
+
+.transition-specanimationblock-filter1-0-0.specanimationblock-filter .blockfilter {
+  animation: transition-specanimationblock-filter1-0-0 0.2s ease-in-out 0s 1 forwards;
+  -o-animation: transition-specanimationblock-filter1-0-0 0.2s ease-in-out 0s 1 forwards;
+  -moz-animation: transition-specanimationblock-filter1-0-0 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: transition-specanimationblock-filter1-0-0 0.2s ease-in-out 0s 1 forwards;
+}
+@keyframes transition-specanimationblock-filter1-0-0 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes transition-specanimationblock-filter1-0-0 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes transition-specanimationblock-filter1-0-0 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes transition-specanimationblock-filter1-0-0 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+.transition-specanimationblock-filter1-1-0.specanimationblock-filter .iconiconfilter1 .a5j2 .a5j3 {
+  animation: transition-specanimationblock-filter1-1-0 0.2s ease-in-out 0s 1 forwards;
+  -o-animation: transition-specanimationblock-filter1-1-0 0.2s ease-in-out 0s 1 forwards;
+  -moz-animation: transition-specanimationblock-filter1-1-0 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: transition-specanimationblock-filter1-1-0 0.2s ease-in-out 0s 1 forwards;
+}
+@keyframes transition-specanimationblock-filter1-1-0 {
+  to {
+  
+  }
+}
+@-o-keyframes transition-specanimationblock-filter1-1-0 {
+  to {
+  
+  }
+}
+@-moz-keyframes transition-specanimationblock-filter1-1-0 {
+  to {
+  
+  }
+}
+@-webkit-keyframes transition-specanimationblock-filter1-1-0 {
+  to {
+  
+  }
+}
+
+.specanimationblock-filter.state1 .blockfilter {
+  opacity: 0;
+  pointer-events: none;
+  top: 0px;
+  transform: rotate(0deg);
+  height: 412px;
+  width: 209px;
+  position: absolute;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+  left: 0px;
+
+}
+.specanimationblock-filter.state1 .iconiconfilter1 .a5j2 .a5j3 {
+  opacity: 1;
+  pointer-events: none;
+  top: 2.27%;
+  transform: rotate(0deg);
+  height: 95.45%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+  left: 0%;
+
+}

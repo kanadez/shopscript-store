@@ -1,0 +1,19 @@
+{if $access_rights}
+    {if $routing_exists}
+        <ul class="menu-h published-status-selector">
+            <li class="gray">[`Not published`]</li>
+            <li>
+                <input type="checkbox" class="published-status-ibutton" value="1" data-path="{$path}"{if $published} checked{/if}>
+            </li>
+            <li>[`Published`]</li>
+        </ul>
+        <p class="published-url-container"{if !$published} style="display: none;"{/if}>
+            <input readonly value="{$url}" class="published-url">
+        </p>
+        <p class="dialog-error-message red"></p>
+    {else}
+        <p><span class="highlighted">{sprintf(_w('No routing rules available for sharing files. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href="%s">Structure</a>” section.'), $site_url)}</span></p>
+    {/if}
+{else}
+    <p><span class="highlighted">[`You have no permission to publish or unpublish log files.`]</span></p>
+{/if}

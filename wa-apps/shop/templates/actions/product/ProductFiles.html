@@ -1,0 +1,180 @@
+{$placeholder = '[`add description`]'}
+
+<!-- plugin hook: 'backend_product_edit.images' -->
+{* @event backend_product_edit.%plugin_id%.images *}
+{if !empty($backend_product_edit)}{foreach $backend_product_edit as $_}{ifset($_.images)}{/foreach}{/if}
+
+<div class="sidebar right200px" id="s-product-images-toolbar">
+
+    <div class="block s-product-images-actions">
+        
+    </div>
+
+</div>
+
+<div class="content right200px">
+    <form id="fileupload_files" action="?module=product&amp;action=fileUpload" method="POST" enctype="multipart/form-data">
+        <div class="s-image-upload-dropbox">
+        	<a href="javascript:void(0);" id="s-upload-files-link" class="fileinput-button">
+                <i class="icon16 upload"></i>[`Выберите файлы`]<input type="file" name="files[]" multiple=""></a>
+        	<span class="gray">[`or drag them here to start upload`]</span>
+        </div>
+
+        <input type="hidden" name="product_id" value="{$product_id}">
+        {$wa->csrf()}
+
+        {include './include.fileUpload.html' inline}
+
+    </form>
+    <ul class="thumbs li250px" id="s-product-file-list"></ul>
+</div>
+
+<div class="dialog width400px height200px" id="s-product-file-delete-dialog">
+    <div class="dialog-background"></div>
+    <div class="dialog-window">
+        <div class="dialog-content">
+            <div class="dialog-content-indent">
+                <h1>[`Удалить файл`]</h1>
+                [`Файл будет удален без возможности восстановления. Удалить?`]
+            </div>
+        </div>
+        <div class="dialog-buttons">
+            <div class="dialog-buttons-gradient">
+                <button class="button red" onclick="files.removeFile()" >[`Delete`]</button> [`or`] <a class="cancel" href="javascript:void(0);">[`cancel`]</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var files = new Files();
+    
+$.product_files.init({
+    product_id:   {$product_id},
+    placeholder: '{$placeholder}',
+    images: {json_encode(array_values($images))},
+    count: {count($images)},
+    enable_2x: {if $wa->shop->config('enable_2x')}true{else}false{/if},
+
+    // handler triggered after drag-n-drop sort
+    onSort: function(id, before_id) {
+
+        // update product profile image list
+        var product_view_images_list = $('#s-product-view .s-product-image-crops');
+        var item = product_view_images_list.find('li[data-image-id=' + id + ']');
+        if (before_id) {
+            product_view_images_list.find('li[data-image-id=' + before_id + ']').before(item);
+        } else {
+            product_view_images_list.append(item);
+        }
+
+        // update images for sku settings blocks
+        var sku_settings_blocks = $('#shop-productprofile .js-sku-settings');
+        sku_settings_blocks.each(function() {
+            var self   = $(this);
+            var sku_id = self.attr('data-id');
+
+            var image_crops = self.find('.s-product-image-crops');
+            var item = image_crops.find('li[data-image-id=' + id + ']');
+            if (before_id) {
+                image_crops.find('li[data-image-id=' + before_id + ']').before(item);
+            } else {
+                image_crops.append(item);
+            }
+        });
+    }
+
+});
+
+var saveProductVideo = function () {
+    var form = $('#s-product-video');
+    form.find('.loading').show();
+    form.find('.error').removeClass();
+    form.find('.errormsg').hide();
+    $.shop.jsonPost(
+        '?module=productVideoSave&id={$product_id}',
+        form.serialize(),
+        function (r) {
+            form.find('.loading').hide();
+            form.find('.yes').show();
+            if (!r.data.product.video_url) {
+                setTimeout(function() {
+                    form.find('.yes').hide();
+                    form.find('.s-product-video-unlink').hide();
+                }, 250);
+            } else {
+                setTimeout(function () {
+                    form.find('.s-product-video-unlink').show();
+                }, 250);
+            }
+        },
+        function (r) {
+            var errors = (r && r.errors) || [];
+            form.find('.loading').hide();
+            $.each(errors, function (i, error) {
+                var input = form.find('[name="' + error.name + '"]');
+                input.addClass('error');
+                form.find('.s-product-video-error-url').show().text(error.msg);
+            });
+        }
+    );
+};
+{literal}
+function Files(){
+    this.file_to_remove = null;
+    this.remove_action = "?module=product&action=FileDelete&id=";
+    this.remove_dialog = $('#s-product-file-delete-dialog');
+    
+    this.setupUI = function(){
+        $('#s-content ul.thumbs li.file').hover(
+            function(){
+                $(this).find('a.delete').animate({opacity: 1}, 200);
+            }, 
+            function(){
+                $(this).find('a.delete').animate({opacity: 0}, 200);
+            }
+        );
+    };
+
+    this.openRemoveFileDialog = function(file_id){
+        this.file_to_remove = file_id;
+        
+        this.remove_dialog.waDialog();
+    };
+    
+    this.removeFile = function(){
+        var self = this;
+        
+        if (this.file_to_remove != null){
+            $.shop.jsonPost(this.remove_action+this.file_to_remove, {}, function (r){
+                    if (r.status == "ok"){
+                        $('#file_'+self.file_to_remove).remove();
+                        self.file_to_remove = null;
+                        self.remove_dialog.trigger('close');
+                    }
+                    else{
+                        $('#s-product-file-delete-dialog button').css("color", "red");
+                    }
+                }
+            );
+        }
+    };
+}
+
+(function (form) {
+    form.submit(function(e){
+        e.preventDefault();
+        saveProductVideo();
+    });
+    
+    form.find('.s-product-video-unlink').click(function () {
+        if (confirm($(this).data('confirm'))) {
+            form.find('[name=url]').val('');
+            saveProductVideo();
+        }
+    });
+    
+    files.setupUI();
+})($('#s-product-video'));
+{/literal}
+</script>

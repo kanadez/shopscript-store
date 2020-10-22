@@ -1,0 +1,14 @@
+<div class="error_page">
+    <h1>
+            {if $error_code}
+                <div class="code">{$error_code}</div> 
+            {/if}
+            {if $error_message}
+                {$error_message}
+            {else}
+                [s`Error`]
+            {/if}
+    </h1>
+
+    [s`The requested resource is not available.`]
+</div>

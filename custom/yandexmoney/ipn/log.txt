@@ -1,0 +1,422 @@
+
+
+########################################
+09/17/2018 03:08:23 pm
+5a5e763c412354d771a15fdcbb79dbc23823c614
+
+########################################
+09/17/2018 03:10:54 pm
+notification_type: p2p-incoming
+amount: 740.83
+datetime: 2018-09-17T12:10:54Z
+codepro: false
+sender: 41001000040
+sha1_hash: 06311f6036a684c94b67d52046f683d166f0d11e
+test_notification: true
+operation_label: 
+operation_id: test-notification
+currency: 643
+label: 
+06311f6036a684c94b67d52046f683d166f0d11e
+
+########################################
+09/17/2018 03:45:08 pm
+notification_type: p2p-incoming
+amount: 470.07
+datetime: 2018-09-17T12:45:08Z
+codepro: false
+sender: 41001000040
+sha1_hash: e42df7e4f956fd268e2818635ce4aa2602ce0ee2
+test_notification: true
+operation_label: 
+operation_id: test-notification
+currency: 643
+label: 
+e42df7e4f956fd268e2818635ce4aa2602ce0ee2
+1
+
+
+
+########################################
+09/17/2018 03:45:21 pm
+notification_type: p2p-incoming
+amount: 717.81
+datetime: 2018-09-17T12:45:21Z
+codepro: false
+sender: 41001000040
+sha1_hash: 501af3311568ebe413558c187a19c85456b00942
+test_notification: true
+operation_label: 
+operation_id: test-notification
+currency: 643
+label: 
+501af3311568ebe413558c187a19c85456b00942
+1
+
+
+
+########################################
+09/17/2018 03:56:49 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-17T12:56:45Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: f12795c0a1f7414f08d35280f55a7c540a1c596b
+unaccepted: false
+operation_label: 2331b828-0009-5000-8000-00003427f911
+operation_id: 1181008411062016025
+currency: 643
+label: shop_410017338365997_131
+f12795c0a1f7414f08d35280f55a7c540a1c596b
+1
+shop
+410017338365997
+: ########################################
+time: 09/17/2018 07:19:42 pm
+sha1: b201aa70258367dafcce66d82e059679884bca2d
+: 
+########################################
+time: 09/17/2018 07:20:13 pm
+notification_type: p2p-incoming
+amount: 496.29
+datetime: 2018-09-17T16:20:12Z
+codepro: false
+sender: 41001000040
+sha1_hash: 9d5e5fcacef5d216eb971ce7f907944da5a1a96d
+test_notification: true
+operation_label: 
+operation_id: test-notification
+currency: 643
+label: 
+sha1: 9d5e5fcacef5d216eb971ce7f907944da5a1a96d
+sql query response: 1
+label part 1: 
+label part 2: 
+setOrderPaid(): failed
+setOrderPaid(): succeed response: 1
+: 
+########################################
+time: 09/17/2018 07:33:02 pm
+sha1: b201aa70258367dafcce66d82e059679884bca2d
+setOrderPaid(): already paid, order 125
+setOrderPaid(): time: 2018-09-17 07:36:57 pm
+setOrderPaid(): already paid, order 125
+setOrderPaid(): 
+time: 2018-09-17 07:38:16 pm
+setOrderPaid(): already paid, order 125
+
+setOrderPaid(): time: 2018-09-17 07:38:32 pm
+setOrderPaid(): already paid, order 125
+
+setOrderPaid(): time: 2018-09-17 07:38:49 pm
+setOrderPaid(): setting paid order 124, response: 1
+
+setOrderPaid(): time: 2018-09-17 07:54:19 pm
+setOrderPaid(): setting paid order 123, response: 1
+
+setOrderPaid(): time: 2018-09-17 19:55:05 pm
+setOrderPaid(): setting paid order 122, response: 1
+
+setOrderPaid(): time: 2018-09-17 19:55:23 pm
+setOrderPaid(): setting paid order 121, response: 1
+: 
+########################################
+time: 09/17/2018 08:34:02 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-17T17:33:57Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: f916bdc61b2e658b943c652f08a76de329225002
+unaccepted: false
+operation_label: 2331f939-0009-5000-8000-0000342a9868
+operation_id: 1181041674760032025
+currency: 643
+label: shop_410017338365997_132
+sha1: f916bdc61b2e658b943c652f08a76de329225002
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 
+
+setOrderPaid(): time: 2018-09-17 20:34:02 pm
+setOrderPaid(): setting paid order , response: 1
+: 
+########################################
+time: 09/17/2018 08:38:08 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-17T17:38:06Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: 3e0c610c294a8e4c84d33380dd46f8038529bd42
+unaccepted: false
+operation_label: 2331fa1b-0009-5000-8000-0000342aa020
+operation_id: 1181042172014044025
+currency: 643
+label: shop_410017338365997_133
+sha1: 3e0c610c294a8e4c84d33380dd46f8038529bd42
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 133
+
+setOrderPaid(): time: 2018-09-17 20:38:08 pm
+setOrderPaid(): setting paid order 133, response: 1
+: 
+########################################
+time: 09/18/2018 01:31:59 pm
+notification_type: card-incoming
+amount: 2.94
+datetime: 2018-09-18T10:31:55Z
+codepro: false
+withdraw_amount: 3.00
+sender: 
+sha1_hash: dd596f5fd3cfda011b81935e26a1e5ee1eda680b
+unaccepted: false
+operation_label: 2332e7b5-0011-5000-8000-10f83ef9fd7d
+operation_id: 590581915786008012
+currency: 643
+label: shop_410017338365997_134
+sha1: dd596f5fd3cfda011b81935e26a1e5ee1eda680b
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 134
+
+setOrderPaid(): time: 2018-09-18 13:31:59 pm
+setOrderPaid(): setting paid order 134, response: 1
+: 
+########################################
+time: 09/19/2018 03:56:09 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-19T12:56:02Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: fff0b184f069bf7e9f24227636f46d8532334c35
+unaccepted: false
+operation_label: 23345b03-0009-5000-8000-00003439edea
+operation_id: 1181353924012016025
+currency: 643
+label: shop_410017338365997_137
+sha1: fff0b184f069bf7e9f24227636f46d8532334c35
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 137
+
+setOrderPaid(): time: 2018-09-19 15:56:09 pm
+setOrderPaid(): setting paid order 137, response: 1
+: 
+########################################
+time: 09/19/2018 04:29:14 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-19T13:29:09Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: 89825e7fa028fbeb14b21595920c4fada8e43581
+unaccepted: false
+operation_label: 233462aa-0009-5000-8000-0000343a484e
+operation_id: 1181357898498058025
+currency: 643
+label: shop_410017338365997_138
+sha1: 89825e7fa028fbeb14b21595920c4fada8e43581
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 138
+
+setOrderPaid(): time: 2018-09-19 16:29:14 pm
+setOrderPaid(): setting paid order 138, response: 1
+: 
+########################################
+time: 09/19/2018 04:45:18 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-19T13:45:13Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: b846ce12ba0c940fd4bdd4ee509b17c1d6a0af94
+unaccepted: false
+operation_label: 2334669e-0009-5000-8000-0000343a7744
+operation_id: 1181359827882016025
+currency: 643
+label: shop_410017338365997_139
+sha1: b846ce12ba0c940fd4bdd4ee509b17c1d6a0af94
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 139
+
+setOrderPaid(): time: 2018-09-19 16:45:18 pm
+setOrderPaid(): setting paid order 139, response: 1
+: 
+########################################
+time: 09/19/2018 05:45:03 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-19T14:44:58Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: db9527e3d12d1adf13a605b2b8e227de4bdc1c52
+unaccepted: false
+operation_label: 2334749c-0009-5000-8000-0000343b1811
+operation_id: 1181366996918016025
+currency: 643
+label: shop_410017338365997_140
+sha1: db9527e3d12d1adf13a605b2b8e227de4bdc1c52
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 140
+
+setOrderPaid(): time: 2018-09-19 17:45:03 pm
+setOrderPaid(): setting paid order 140, response: 1
+: 
+########################################
+time: 09/19/2018 05:53:26 pm
+notification_type: p2p-incoming
+amount: 1.99
+datetime: 2018-09-19T14:53:19Z
+codepro: false
+withdraw_amount: 2.00
+sender: 410011516833133
+sha1_hash: fc7dadc693d2a055fbc254d7acdb5e6fc2d18b09
+unaccepted: false
+operation_label: 23347684-0009-5000-8000-0000343b2f29
+operation_id: 1181367999360060025
+currency: 643
+label: shop_410017338365997_141
+sha1: fc7dadc693d2a055fbc254d7acdb5e6fc2d18b09
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 141
+
+setOrderPaid(): time: 2018-09-19 17:53:26 pm
+setOrderPaid(): setting paid order 141, response: 1
+: 
+########################################
+time: 09/19/2018 05:59:57 pm
+notification_type: p2p-incoming
+amount: 1.99
+datetime: 2018-09-19T14:59:53Z
+codepro: false
+withdraw_amount: 2.00
+sender: 410011516833133
+sha1_hash: d1ffb2f275251ae74ec74a1be04d27adc8e900b6
+unaccepted: false
+operation_label: 2334781e-0009-5000-8000-0000343b428f
+operation_id: 1181368786886332025
+currency: 643
+label: shop_410017338365997_142
+sha1: d1ffb2f275251ae74ec74a1be04d27adc8e900b6
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 142
+
+setOrderPaid(): time: 2018-09-19 17:59:57 pm
+setOrderPaid(): setting paid order 142, response: 1
+: 
+########################################
+time: 09/19/2018 06:19:57 pm
+notification_type: p2p-incoming
+amount: 1.99
+datetime: 2018-09-19T15:19:54Z
+codepro: false
+withdraw_amount: 2.00
+sender: 410011516833133
+sha1_hash: c4860260f9e31119ea146550ce756ae7cabe657f
+unaccepted: false
+operation_label: 23347cab-0009-5000-8000-0000343b746a
+operation_id: 1181371188668016025
+currency: 643
+label: shop_410017338365997_144
+sha1: c4860260f9e31119ea146550ce756ae7cabe657f
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 144
+
+setOrderPaid(): time: 2018-09-19 18:19:57 pm
+setOrderPaid(): setting paid order 144, response: 1
+: 
+########################################
+time: 09/20/2018 03:33:24 pm
+notification_type: p2p-incoming
+amount: 2.99
+datetime: 2018-09-20T12:33:17Z
+codepro: false
+withdraw_amount: 3.00
+sender: 410011516833133
+sha1_hash: 264f1a8cb71ba3ce5b06533f3f20c043dc802cb2
+unaccepted: false
+operation_label: 2335a731-0009-5000-8000-000034435f4a
+operation_id: 1181523995388018025
+currency: 643
+label: shop_410017338365997_151
+sha1: 264f1a8cb71ba3ce5b06533f3f20c043dc802cb2
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 151
+
+setOrderPaid(): time: 2018-09-20 15:33:24 pm
+setOrderPaid(): setting paid order 151, response: 1
+: 
+########################################
+time: 09/20/2018 03:35:04 pm
+notification_type: p2p-incoming
+amount: 1.99
+datetime: 2018-09-20T12:34:58Z
+codepro: false
+withdraw_amount: 2.00
+sender: 410011516833133
+sha1_hash: 93cc67d9384fd41eab012b711aa7e7b6e93db907
+unaccepted: false
+operation_label: 2335a7a8-0009-5000-8000-0000344364d3
+operation_id: 1181524197680016025
+currency: 643
+label: shop_410017338365997_152
+sha1: 93cc67d9384fd41eab012b711aa7e7b6e93db907
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 152
+
+setOrderPaid(): time: 2018-09-20 15:35:04 pm
+setOrderPaid(): setting paid order 152, response: 1
+: 
+########################################
+time: 09/20/2018 06:53:43 pm
+notification_type: p2p-incoming
+amount: 1.99
+datetime: 2018-09-20T15:53:39Z
+codepro: false
+withdraw_amount: 2.00
+sender: 410011516833133
+sha1_hash: 5ba4c7223d941b5d73bb5c354ce574c4c6946721
+unaccepted: false
+operation_label: 2335d625-0009-5000-8000-00003445466a
+operation_id: 1181548038418016025
+currency: 643
+label: shop_410017338365997_153
+sha1: 5ba4c7223d941b5d73bb5c354ce574c4c6946721
+sql query response: 1
+label part 1: shop
+label part 2: 410017338365997
+label part 3: 153
+
+setOrderPaid(): time: 2018-09-20 18:53:43 pm
+setOrderPaid(): setting paid order 153, response: 1

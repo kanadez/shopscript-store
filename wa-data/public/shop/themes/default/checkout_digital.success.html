@@ -1,0 +1,90 @@
+{$from_orders_get_key = "orders"}
+{$from_orders_get_value = $wa->get("from")}
+
+{if isset($from_orders_get_value) && $from_orders_get_value == $from_orders_get_key}
+    {$from_orders = TRUE}
+{else}
+    {$from_orders = FALSE}
+{/if}
+
+{if $from_orders}
+<div class="checkout-result success">
+    <div class="welcome">
+        <h1>[`Скачивание товара`]</h1>
+        {if empty($payment_success) || !$order.payment_completed}
+        <div class="payment_tip" style="margin: 20px 0;">
+            <i>[`Внимание! Скачать товар Вы сможете только после оплаты.`]</i>
+            <br><i>[`Для этого нажмите "Вернуться на сайт" сразу после оплаты.`]</i>
+            <br><i>[`Также скачать купленный товар можно из письма в Вашей электронной почте.`]</i>
+        </div>
+        {/if}
+    </div>
+    
+    {if !empty($payment)}
+        <div class="plugin">
+            {$payment}
+        </div>
+    {/if}
+
+    {if !empty($payment_success) && $order.payment_completed && $order.purchased_product_links}
+        <span class="highlighted">[`Чтобы скачать купленный товар, нажмите на ссылки ниже.`]</span>
+        <div>[`Ссылки будут доступны в течение часа`]:</div>
+        {foreach $order.purchased_product_links as $link}
+            <a href="{$link.file_url}">{$link.file_name}</a>
+        {/foreach}
+    {else if !empty($order.payment_error_message)}
+        {$order.payment_error_message}
+        <a href="/support">Написать в поддержку</a>
+    {/if}
+    
+    <!-- plugin hook: 'frontend_checkout' -->
+    {* @event frontend_checkout.%plugin_id% *}
+    {foreach $frontend_checkout as $_}{$_}{/foreach}
+        
+</div>
+
+<p class="back">
+    <a class="button_solid back" onclick="history.back()" href="javascript:void(0)">[`Назад`]</a>
+</p>
+{else}
+<div class="checkout-result success">
+    <div class="welcome">
+        <h1>[`Thank you!`]</h1>
+        <p>[`We successfully accepted your order, and will contact you asap.`]<br />
+        [`Your order number is `] <strong>{$order.id}</strong>.</p>
+        {if empty($payment_success) || !$order.payment_completed}
+        <div class="payment_tip " style="margin: 20px 0;">
+            <i>[`Внимание! Скачать товар Вы сможете только после оплаты.`]</i>
+            <br><i>[`Для этого нажмите "Вернуться на сайт" сразу после оплаты.`]</i>
+            <br><i>[`Также скачать купленный товар можно из письма в Вашей электронной почте.`]</i>
+        </div>
+        {/if}
+    </div>
+    
+    {if !empty($payment)}
+        <div class="plugin">
+            {$payment}
+        </div>
+    {/if}
+
+    {if !empty($payment_success) && $order.payment_completed && $order.purchased_product_links}
+        <span class="highlighted">[`Your payment has been successfully accepted. We will process your order and contact you shortly.`]</span>
+        <div>[`Ссылки для скачивания товара (будут доступны в течение часа)`]:</div>
+        {foreach $order.purchased_product_links as $link}
+            <a href="{$link.file_url}">{$link.file_name}</a>
+        {/foreach}
+    {else if !empty($order.payment_error_message)}
+        {$order.payment_error_message}
+        <a href="/support">Написать в поддержку</a>
+    {/if}
+    
+    <!-- plugin hook: 'frontend_checkout' -->
+    {* @event frontend_checkout.%plugin_id% *}
+    {foreach $frontend_checkout as $_}{$_}{/foreach}
+        
+</div>
+
+<p class="back">
+    <a class="button_solid back" href="{$wa_app_url}">[`Back to the store`]</a>
+</p>
+{/if}

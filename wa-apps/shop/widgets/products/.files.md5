@@ -1,0 +1,13 @@
+3db22139ba9dfe5e7557305ce621e6d2 *img/products.png
+a1751e1f10a3b96b05d0401c97e72008 *lib/.htaccess
+e17c7bff29c4a2a101dec335fa05b209 *lib/config/build.php
+ea623e71de1cf87364885ed5c46bc7c2 *lib/config/settings.php
+d68ad3fd60c4060e2315b9fee2cdc976 *lib/config/widget.php
+b0f84cb0b4aa02d53a61cd468f53e3b9 *lib/shopProducts.widget.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+e0cfcd0343ede8494b902685cd594731 *locale/en_US/LC_MESSAGES/shop_widget_products.mo
+842f95964066a7f0745de2a0e7504821 *locale/en_US/LC_MESSAGES/shop_widget_products.po
+11b2b691c14c6089d435b8cd69126a0f *locale/ru_RU/LC_MESSAGES/shop_widget_products.mo
+f8b3dd2b7e5046cd790962f188912a7e *locale/ru_RU/LC_MESSAGES/shop_widget_products.po
+a1751e1f10a3b96b05d0401c97e72008 *templates/.htaccess
+453ae16db80c54bdf176d660164153ad *templates/Default.html

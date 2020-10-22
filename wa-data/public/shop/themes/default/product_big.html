@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="{$wa_theme_url}css/product-big.css">
+
+<section class="product">
+    <div class="showcase">
+        <div class="center">
+            <div class="product_content">
+                <h1 class="product_title">
+                    {$product.name|escape}
+                </h1>
+                <div class="images_slider {if count($product.images) > 1}padding{/if}">
+                    <div class="vertical-center-4 slider">
+                        <div>
+                            {$wa->shop->productImgHtml($product, '750', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $product.name|escape ])}
+                        </div>
+                        {if count($product.images) > 1}
+                            {foreach $product.images as $image}
+                                <div>
+                                    {$wa->shop->imgHtml($image, '750')}
+                                </div>
+                            {/foreach}
+                        {/if}
+                    </div>
+                </div>
+                <h2 class="product_description">{$product.summary}</h2>
+                {if !empty($product.compare_price)}
+                <div class="product_price"><s>{$product.compare_price}</s>&nbsp;<b>{$product.price} {translateCurrency currency=$product.currency}</b></div>
+                {else}
+                <div class="product_price">{$product.price} {translateCurrency currency=$product.currency}</div>
+                {/if}
+                <a id="add_to_cart" data-added-success-text="Добавлено" data-added-fail-text="Ошибка" href="javascript:void(0)" onclick="product.addToCart({$product.id})" class="button_solid">В корзину</a>
+                <div class="product_full_description">
+                {if $product.description}
+                    {$product.description}
+                {/if}
+                </div>
+                
+                {$crossselling = $product->crossSelling(4)} {* как только Ольга посмотрит, нужно это откммоентить а строку ниже удалить *}
+                {* $crossselling = $wa->shop->productSet("cross_test") *}
+                
+                {if $crossselling}
+                    <div class="cross_links">
+                        <div class="title">С этим товаром покупают</div>
+                        <div class="showcase">
+                        {foreach $crossselling as $cross_product}
+                            <div class="single">
+                                <a href="{$cross_product.frontend_url}">
+                                    {$wa->shop->productImgHtml($cross_product, '172x172', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $cross_product.name|escape ])}
+                                </a>
+                                <a href="{$cross_product.frontend_url}">
+                                    <div class="title">{$cross_product.name}</div>
+                                    {if !empty($cross_product.compare_price)}
+                                    <div class="price"><s>{$cross_product.compare_price}</s>&nbsp;<b>{$cross_product.price} {translateCurrency currency=$cross_product.currency}</b></div>
+                                    {else}
+                                    <div class="price">{$cross_product.price} {translateCurrency currency=$cross_product.currency}</div>
+                                    {/if}
+                                </a>
+                            </div>
+                        {/foreach}
+                        </div>
+                    </div>
+                {/if}
+            </div>
+        </div>
+        {if $arrow_url = $wa->shop->getNextProduct($product)}
+        <a href="{$arrow_url}" class="right_arrow"></a>
+        {/if}
+    </div>
+    <div class="social_panel">
+        <a href="" class="facebook"></a>
+        <a href="" class="instagram"></a>
+        <a href="" class="twitter"></a>
+    </div>
+</section>

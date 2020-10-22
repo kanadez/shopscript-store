@@ -1,0 +1,16 @@
+1b18876b8590f43950a0fcc8e2db346c *img/news.png
+34d1db487d8b09f4a72273882ce33184 *js/news.widget.js
+a285da79a1cf95556e4eb1fd40059097 *lib/.htaccess
+38f80bb60483f3610b79d6160734f05e *lib/config/build.php
+f493e3bec5ec778649fb9a4bde7d8036 *lib/config/requirements.php
+56443db40fae30bcba4893e821d12040 *lib/config/settings.php
+77bdce4de8a028d5c6c2c0ed5b532b38 *lib/config/widget.php
+aded7bfe37404c93c2e0de9ba6a4cd8d *lib/news.widget.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+4d87f74a80902559497007e832a93911 *locale/en_US/LC_MESSAGES/widget_news.mo
+2d626d1cc074f126a8b7e52b33b8dd03 *locale/en_US/LC_MESSAGES/widget_news.po
+f3a015b49d2b74a467c9b4a6f4e9cf1d *locale/ru_RU/LC_MESSAGES/widget_news.mo
+192117c2d844099e22f7d03b8365a9a9 *locale/ru_RU/LC_MESSAGES/widget_news.po
+a285da79a1cf95556e4eb1fd40059097 *templates/.htaccess
+84120edd872b0162a078d88ead2346b3 *templates/CustomRssControl.html
+a473d6cf37b2ea17604db3a4b821e355 *templates/Default.html

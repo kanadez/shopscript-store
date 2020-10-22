@@ -1,0 +1,33 @@
+{strip}
+    {$wrapper_id = {uniqid('s-hint-wrapper')}}
+    <div class="s-hint-wrapper" id="{$wrapper_id}">
+        <a href="javascript:void(0);" class="s-hint-toggle"><i class="icon10 info"></i></a>
+        <div class="s-hint-block" style="display: none;">
+            <p class="s-hint-text">{$hint.text}</p>
+            <a href="{$hint.link}" target="_blank" class="s-hint-link">[`Read more`]</a>
+        </div>
+        <script>
+            $(function () {
+                var $wrapper = $('#{$wrapper_id}'),
+                    $block = $wrapper.find('.s-hint-block'),
+                    $toggle = $wrapper.find('.s-hint-toggle'),
+                    is_show = false;
+
+                $toggle.click(function (e) {
+                    if (is_show) {
+                        $block.hide();
+                        is_show = false;
+                        return;
+                    }
+                    var css = {
+                        position: 'absolute',
+                        top: e.pageYOffset,
+                        left: e.pageXOffset + 10
+                    };
+                    $block.css(css).show();
+                    is_show = true;
+                });
+            });
+        </script>
+    </div>
+{/strip}

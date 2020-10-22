@@ -1,0 +1,124 @@
+
+2018-07-04 15:44:09 178.66.149.233
+Table 'ftf.wa_app_settings' doesn't exist
+## wa-system/database/waDbMysqliAdapter.class.php(292)
+#0 wa-system/database/waDbMysqliAdapter.class.php(168): waDbMysqliAdapter->exception()
+#1 wa-system/database/waModel.class.php(185): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 wa-system/database/waModel.class.php(141): waModel->describe()
+#3 wa-system/database/waModel.class.php(97): waModel->getFields()
+#4 wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 wa-system/contact/waContact.class.php(67): waModel->__construct()
+#6 wa-system/user/waUser.class.php(22): waContact->init()
+#7 wa-system/user/waAuthUser.class.php(30): waUser->init()
+#8 wa-system/user/waAuthUser.class.php(24): waAuthUser->init()
+#9 wa-system/waSystem.class.php(240): waAuthUser->__construct(NULL, Array)
+#10 wa-system/waSystem.class.php(281): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#11 wa-system/waSystem.class.php(526): waSystem->getUser()
+#12 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#13 index.php(7): waSystem->dispatch()
+#14 {main}
+
+2018-07-04 15:44:09 178.66.149.233
+Table 'ftf.wa_app_settings' doesn't exist
+## wa-system/database/waDbMysqliAdapter.class.php(292)
+#0 wa-system/database/waDbMysqliAdapter.class.php(168): waDbMysqliAdapter->exception()
+#1 wa-system/database/waModel.class.php(185): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 wa-system/database/waModel.class.php(141): waModel->describe()
+#3 wa-system/database/waModel.class.php(97): waModel->getFields()
+#4 wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 wa-system/auth/waAuth.class.php(43): waModel->__construct()
+#6 wa-system/waSystem.class.php(215): waAuth->__construct(Array)
+#7 wa-system/waSystem.class.php(382): waSystem->getFactory('auth', 'waAuth', Array)
+#8 wa-system/user/waAuthUser.class.php(43): waSystem->getAuth()
+#9 wa-system/user/waAuthUser.class.php(24): waAuthUser->init()
+#10 wa-system/waSystem.class.php(240): waAuthUser->__construct(NULL, Array)
+#11 wa-system/waSystem.class.php(281): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#12 wa-system/waSystem.class.php(526): waSystem->getUser()
+#13 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#14 index.php(7): waSystem->dispatch()
+#15 {main}
+
+2018-07-04 15:44:09 178.66.149.233
+Table 'ftf.wa_app_settings' doesn't exist
+## wa-system/database/waDbMysqliAdapter.class.php(292)
+#0 wa-system/database/waDbMysqliAdapter.class.php(168): waDbMysqliAdapter->exception()
+#1 wa-system/database/waModel.class.php(185): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 wa-system/database/waModel.class.php(141): waModel->describe()
+#3 wa-system/database/waModel.class.php(97): waModel->getFields()
+#4 wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 wa-system/config/waAppConfig.class.php(261): waModel->__construct()
+#6 wa-system/waSystem.class.php(96): waAppConfig->checkUpdates()
+#7 wa-system/waSystem.class.php(1701): waSystem::getInstance('webasyst', NULL, 1)
+#8 wa-system/waSystem.class.php(527): wa('webasyst', 1)
+#9 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#10 index.php(7): waSystem->dispatch()
+#11 {main}
+
+2018-07-20 09:32:17 178.66.147.217
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+## wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 wa-system/contact/waContact.class.php(67): waModel->__construct()
+#4 wa-system/user/waUser.class.php(22): waContact->init()
+#5 wa-system/user/waAuthUser.class.php(30): waUser->init()
+#6 wa-system/user/waAuthUser.class.php(24): waAuthUser->init()
+#7 wa-system/waSystem.class.php(240): waAuthUser->__construct(NULL, Array)
+#8 wa-system/waSystem.class.php(281): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#9 wa-system/waSystem.class.php(526): waSystem->getUser()
+#10 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#11 index.php(7): waSystem->dispatch()
+#12 {main}
+
+2018-07-20 09:32:17 178.66.147.217
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+## wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 wa-system/auth/waAuth.class.php(43): waModel->__construct()
+#4 wa-system/waSystem.class.php(215): waAuth->__construct(Array)
+#5 wa-system/waSystem.class.php(382): waSystem->getFactory('auth', 'waAuth', Array)
+#6 wa-system/user/waAuthUser.class.php(43): waSystem->getAuth()
+#7 wa-system/user/waAuthUser.class.php(24): waAuthUser->init()
+#8 wa-system/waSystem.class.php(240): waAuthUser->__construct(NULL, Array)
+#9 wa-system/waSystem.class.php(281): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#10 wa-system/waSystem.class.php(526): waSystem->getUser()
+#11 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#12 index.php(7): waSystem->dispatch()
+#13 {main}
+
+2018-07-20 09:32:17 178.66.147.217
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+## wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 wa-system/contact/waContactInfoStorage.class.php(24): waModel->__construct()
+#4 wa-system/contact/waContactInfoStorage.class.php(31): waContactInfoStorage->getModel()
+#5 wa-system/contact/waContactStorage.class.php(54): waContactInfoStorage->load(Object(waAuthUser), Array)
+#6 wa-system/contact/waContact.class.php(422): waContactStorage->get(Object(waAuthUser), 'is_user')
+#7 wa-system/contact/waContact.class.php(1228): waContact->get('is_user')
+#8 wa-system/user/waAuthUser.class.php(60): waContact->offsetGet('is_user')
+#9 wa-system/user/waAuthUser.class.php(24): waAuthUser->init()
+#10 wa-system/waSystem.class.php(240): waAuthUser->__construct(NULL, Array)
+#11 wa-system/waSystem.class.php(281): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#12 wa-system/waSystem.class.php(526): waSystem->getUser()
+#13 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#14 index.php(7): waSystem->dispatch()
+#15 {main}
+
+2018-07-20 09:32:17 178.66.147.217
+Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+## wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 wa-system/config/waAppConfig.class.php(261): waModel->__construct()
+#4 wa-system/waSystem.class.php(96): waAppConfig->checkUpdates()
+#5 wa-system/waSystem.class.php(1701): waSystem::getInstance('webasyst', NULL, false)
+#6 wa-system/waSystem.class.php(551): wa('webasyst')
+#7 wa-system/waSystem.class.php(485): waSystem->dispatchBackend('webasyst/')
+#8 index.php(7): waSystem->dispatch()
+#9 {main}

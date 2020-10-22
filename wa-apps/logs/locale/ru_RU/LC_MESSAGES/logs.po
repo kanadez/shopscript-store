@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: logs\n"
+"POT-Creation-Date: 2013-10-14 22:25+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: logs\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/logs/templates/actions/backend/BackendDirectory.html:10
+msgid "No logs so far"
+msgstr "Логов нет."
+
+#: /wa-apps/logs/lib/classes/logsHelper.class.php:77
+msgid "File cannot be accessed."
+msgstr "Доступ к файлу невозможен."
+
+#: /wa-apps/logs/lib/actions/backend/logsNavigation.action.php:18
+msgid "View files by directory"
+msgstr "По директориям"
+
+#: /wa-apps/logs/lib/actions/backend/logsNavigation.action.php:23
+msgid "Sort files by size"
+msgstr "По размеру"
+
+msgid "B,KB,MB,GB"
+msgstr "Б,кБ,МБ,ГБ"
+
+msgid "Logs"
+msgstr "Логи"
+
+msgid "cancel"
+msgstr "отмена"
+
+msgid "File cannot be deleted"
+msgstr "Не удалось удалить файл."
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete file"
+msgstr "Удалить файл"
+
+msgid "Can delete files"
+msgstr "Может удалять файлы"
+
+msgid "OK"
+msgstr ""
+
+msgid "Save"
+msgstr "Сохранить"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:4
+#: /wa-apps/logs/templates/includes/fileList.html:8
+msgid "Download"
+msgstr "Скачать"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:15
+msgid "Total logs size"
+msgstr "Общий размер логов"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendNavigation.action.php:30
+msgid "Sort files by update time"
+msgstr "По времени изменения"
+
+#: /wa-apps/logs/templates/actions/backend/BackendFile.html:19
+msgid "Choose a page"
+msgstr "Выберите страницу"
+
+#: /wa-apps/logs/templates/actions/backend/BackendFile.html:20
+msgid "View previous lines"
+msgstr "Предыдущее содержимое"
+
+#: /wa-apps/logs/templates/actions/backend/BackendFile.html:22
+msgid "View next lines"
+msgstr "Далее"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:11
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:21
+msgid "Settings"
+msgstr "Настройки"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:12
+msgid "PHP error messages will be saved to file <tt>wa-log/<b>php.log</b></tt>."
+msgstr "Сообщения об ошибках PHP будут сохраняться в файл  <tt>wa-log/<b>php.log</b></tt>."
+
+#: /wa-apps/logs/lib/classes/logsHelper.class.php:327
+msgid "Cannot save changes due to insufficient write permissions for file <tt>%s</tt>."
+msgstr "Не удалось сохранить изменения из-за недостаточных прав доступа к файлу <tt>%s</tt>."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:8
+msgid "Enable PHP error log"
+msgstr "Включить логирование ошибок PHP"
+
+msgid "nothing received"
+msgstr "новых записей нет"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:13
+msgid "Enable this setting if you cannot, or do not want to, edit files on your server."
+msgstr "Включите эту настройку, если вы не можете или не хотите вручную редактировать файлы на сервере."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:14
+msgid "Otherwise add the following lines to your file <tt class>%s</tt>:"
+msgstr "В противном случае добавьте следующие строки в файл <tt class>%s</tt>:"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:7
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:30
+msgid "View PHP info"
+msgstr "Конфигурация PHP"
+
+#: /wa-apps/logs/lib/config/logsRightConfig.class.php:8
+msgid "Can change settings"
+msgstr "Может изменять настройки"
+
+#: /wa-apps/logs/lib/config/logsRightConfig.class.php:9
+msgid "Can view PHP configuration"
+msgstr "Может просматривать конфигурацию PHP"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:54
+msgid "back"
+msgstr "назад"
+
+#: /wa-apps/logs/templates/actions/backend/BackendSettings.html:12
+msgid "Not available due to access rights settings."
+msgstr "Недоступно из-за ограничений прав доступа."
+
+msgid "deleted file"
+msgstr "удалил файл"
+
+msgid "published file"
+msgstr "опубликовал файл"
+
+msgid "unpublished file"
+msgstr "отменил публикацию файла"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:25
+msgid "Keeping this option enabled for a long time may make your disk space occupied by large error logs! Use it only during a brief period of debugging."
+msgstr "Включение этой настройки на длительный период может привести к заполнению дискового пространства большими логами ошибок. Используйте её только на время непродолжительного тестирования."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:21
+msgid "This setting will remain valid during 1 hour only (until %s), to prevent large error logs from occupying server disk space."
+msgstr "Эта настройка будет действовать только в течение 1 часа (до %s) во избежание заполнения дискового пространства большими логами ошибок."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:23
+msgid "Re-enable it after this time expires, if necessary."
+msgstr "Включите её повторно после истечения этого времени, если необходимо."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:38
+msgid "Notify me on large logs size"
+msgstr "Уведомлять меня о большом размере логов"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:43
+msgid "Show indicator %s next to app icon in main menu when total logs size exceed 1 GB."
+msgstr "Показывать индикатор %s рядом с иконкой приложения в главном меню, когда общий размер логов превысит 1 ГБ."
+
+#: /wa-apps/logs/lib/config/logsConfig.class.php:27
+msgid "1GB+"
+msgstr "1ГБ+"
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:27
+msgid "Reload file list"
+msgstr "Обновить список файлов"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:26
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:34
+msgid "This setting will remain valid during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr "Эта настройка будет действовать только в течение 1 часа — во избежание заполнения дискового пространства большими логами ошибок."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:39
+msgid "This limitation is not applied with \"%s\" setting enabled in <a href=\"%s\" target=\"_blank\">Installer</a>."
+msgstr "Это ограничение не действует, если включена настройка «%s» в «<a href=\"%s\" target=\"_blank\">Инсталлере</a>»."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:64
+msgid "PHP errors will be logged without limitations, because \"%s\" setting is enabled in <a href=\"%s\" target=\"_blank\">Installer</a>."
+msgstr "Ошибки PHP будут логироваться без ограничений, потому что включена настройка «%s» в «<a href=\"%s\" target=\"_blank\">Инсталлере</a>»."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:70
+msgid "To make PHP errors logged only during 1 hour, disable \"%s\"."
+msgstr "Для того чтобы ошибки PHP логировались только в течение 1 часа, отключите «%s»."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:55
+msgid "This limitation will not be applied if you enable \"%s\" setting in <a href=\"%s\" target=\"_blank\">Installer</a>."
+msgstr "Это ограничение не будет действовать, если включить настройку «%s» в «<a href=\"%s\" target=\"_blank\">Инсталлере</a>»."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:37
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:48
+msgid "PHP errors will be logged during 1 hour only (until %s), to prevent large error logs from occupying server disk space."
+msgstr "Ошибки PHP будут логироваться только в течение 1 часа (до %s) во избежание заполнения дискового пространства большими файлами логов."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:41
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:52
+msgid "Re-enable logging after this time expires, if necessary."
+msgstr "Включите логирование повторно после истечения этого времени, если необходимо."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:42
+#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:58
+msgid "PHP errors will be logged during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr "Ошибки PHP будут логироваться только в течение 1 часа во избежание заполнения дискового пространства большими файлами логов."
+
+msgid "Function <tt>phpinfo()</tt> is not available on your server."
+msgstr "Функция <tt>phpinfo()</tt> недоступна на этом сервере."
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Cannot show PHP configuration"
+msgstr "Просмотр конфигурации PHP невозможен"
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:2
+msgid "Not published"
+msgstr "Не опубликован"
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:6
+msgid "Published"
+msgstr "Опубликован"
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:10
+msgid "Empty file path."
+msgstr "Пустой путь к файлу."
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:16
+msgid "File %s is not published."
+msgstr "Файл %s не опубликован."
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:22
+msgid "File %s does not exist."
+msgstr "Файл %s не существует."
+
+msgid "Share link"
+msgstr "Отправить ссылку"
+
+msgid "No routing rules available for sharing files. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr "Отсутствуют правила маршрутизации для формирования ссылок на файлы. Добавьте <em>скрытое</em> правило для приложения «Логи» в разделе «<a href=\"%s\">Структура</a>» приложения «Сайт»."
+
+#: /wa-apps/logs/templates/includes/fileList.html:7
+msgid "Shared file"
+msgstr "Опубликованный файл"
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:11
+msgid "Empty file path submitted for deletion."
+msgstr "Пустой путь к файлу для удаления."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:15
+msgid "Insufficient access rights for user id=%u to delete log file %s."
+msgstr "У пользователя с id=%u недостаточно прав доступа для удаления лог-файла %s."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:22
+msgid "File %s is not available for deletion."
+msgstr "Файл %s недоступен для удаления."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:28
+msgid "Could not delete file %s."
+msgstr "Не удалось удалить файл %s."
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:12
+msgid "Empty hash or file path."
+msgstr "Пустые хеш или путь к файлу."
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:18
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:9
+msgid "You have no permission to publish or unpublish log files."
+msgstr "У вас нет прав на публикацию или отмену публикации файлов."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:16
+msgid "Incorrect data received. Reload this page and try again."
+msgstr "Получены некорректные данные. Обновите страницу и попробуйте снова."
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:21
+msgid "This file is not available any more. Reload this page."
+msgstr "Этот файл более недоступен. Обновите страницу."
+
+#: /wa-apps/logs/lib/config/logsRightConfig.class.php:8
+msgid "Can publish and unpublish files"
+msgstr "Может публиковать и отменять публикацию файлов."

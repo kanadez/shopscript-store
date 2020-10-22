@@ -1,0 +1,179 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.07.2018, 16:12:50
+    Author     : x
+*/
+
+.content {
+    background-color: white;
+}
+
+header .top_line {
+    background-color: white;
+}
+
+footer {
+    background-color: white;
+}
+
+header .burger {
+    background-color: white;
+}
+
+.product > div{
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+.product > .social_panel{
+    width: 20%;
+    padding-top: 300px;
+    padding-left: 0px;
+    clear: both;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.product > .text, .product > .slider{
+    width: 37%;
+}
+
+.product > .text span:first-child{
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 0;
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48.0px;
+    color: rgba(76, 27, 27, 1.0);
+    text-align: left;
+    line-height: 56.0px;
+}
+
+.product > .text span:last-child{
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 0;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14.0px;
+    color: rgba(76, 27, 27, 1.0);
+    text-align: left;
+    line-height: 29.0px;
+}
+
+.product > .social_panel a{
+    background-color: rgba(255, 255, 255, 0.0);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0.38;
+    background-size: cover;
+    display: block;
+    height: 17px;
+}
+
+.product > .social_panel a.facebook{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 77px;
+    background-position: 77px;
+    margin-bottom: 83px;
+}
+
+.product > .social_panel a.twitter{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 77px;
+    background-position: 0px;
+}
+
+.product > .social_panel a.instagram{
+    background-image: url(../images/logo/first-screen-social@2x.png);
+    width: 79px;
+    background-position: -91px;
+    margin-bottom: 76px;
+}
+
+.product .showcase{
+    width: 100%;
+    padding-top: 50px;
+}
+
+.product .showcase .left_arrow,
+.product .showcase .right_arrow{
+    width: 35px;
+    height: 450px;
+    background-color: #F4F4F4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20%;
+}
+
+.product .showcase .left_arrow:hover,
+.product .showcase .right_arrow:hover{
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+
+.product .showcase .left_arrow{
+    background-image: url(../images/logo/first-screen-copy-2-arrowpreviousicon@2x.png);
+}
+
+.product .showcase .right_arrow{
+    display: inline-block;
+    background-image: url(../images/logo/first-screen-copy-arrownexticon@2x.png);
+}
+
+.product .showcase > div{
+    min-height: 1px;
+    float: left;
+}
+
+.product .showcase .center{
+    width: calc(100% - 70px);
+}
+
+.product .product_content{
+    width: 70%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 1px;
+}
+
+.product .product_content .left_side,
+.product .product_content .right_side{
+    height: 500px;
+    background-color: #e0f1ef;
+    width: 50%;
+    float: left;
+}
+
+.product_title{
+    font-family: "Yeseva One", Helvetica, Arial, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36.0px;
+    color: rgba(135, 198, 190, 1.0);
+    width: 300px;
+    position: absolute;
+    top: 193px;
+    margin-left: -88px;
+}
+
+#add_to_cart.added_success{
+    color: #87c6be;
+    background-color: white;
+    border: none;
+    cursor: default;
+}
+
+#add_to_cart.added_fail{
+    color: lightcoral;
+    background-color: white;
+    border: none;
+}
